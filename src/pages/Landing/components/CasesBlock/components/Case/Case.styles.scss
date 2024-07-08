@@ -1,0 +1,87 @@
+.case {
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    justify-content: center;
+
+    .image {
+        width: 26%;
+        height: auto;
+        margin-right: 6%;
+        flex-shrink: 0;
+        object-fit: contain;
+        filter: drop-shadow(0 35px 25px rgba(0, 0, 0, 0.1));
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+
+        .name {
+            padding-top: 14px;
+            font-size: 3.15rem;
+            font-weight: 700;
+            line-height: 3.698rem;
+            color: var(--tertiary-color);
+            margin-bottom: 76px;
+            width: 82.5%;
+        }
+
+        .description {
+            font-size: 1.7rem;
+            font-weight: 400;
+            line-height: 1.996rem;
+            color: var(--dark-color);
+            margin-bottom: 55px;
+            width: 58%;
+        }
+
+        .table {
+            border: 1px solid var(--dark-color);
+            width: 82.5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 5.5% 26px;
+
+            .column {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 19px;
+
+                .header {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 1.8785rem;
+                    color: var(--dark-color);
+                }
+
+                .value {
+                    font-size: 1.874rem;
+                    font-weight: 700;
+
+                    color: var(--dark-color);
+                }
+
+                .rating {
+                    display: flex;
+                    flex-direction: row;
+
+                    .star {
+                        height: 100%;
+                        margin-left: 1px;
+                        transform: translateY(10%);
+                    }
+                }
+            }
+
+            .line-divider {
+                height: 65.5px;
+                width: 0.5px;
+                background-color: var(--dark-color);
+            }
+        }
+    }
+}

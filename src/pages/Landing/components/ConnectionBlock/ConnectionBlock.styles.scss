@@ -1,0 +1,36 @@
+.connection-block {
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 94px 10.658% 108px 7.03125%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+        font-size: 3.8rem;
+        font-weight: 700;
+        line-height: 4.461rem;
+        color: var(--dark-color);
+        width: 50%;
+    }
+
+    .application-button {
+        border: 4px solid var(--tertiary-color) !important;
+        color: var(--tertiary-color) !important;
+        font-size: 1.7525rem !important;
+        padding: 2% 3% !important;
+        border-radius: 71.57px !important;
+        line-height: 2.0575rem;
+
+        .arrow-icon {
+            height: 2.3rem;
+            width: auto;
+            padding-left: 4%;
+
+            path {
+                stroke: var(--tertiary-color);
+            }
+        }
+    }
+}

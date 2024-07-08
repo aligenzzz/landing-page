@@ -1,0 +1,168 @@
+.form-block {
+    width: 100%;
+    padding: 179px 7.39583% 72px;
+
+    .title {
+        font-size: 3.8rem;
+        font-weight: 600;
+        line-height: 4.461rem;
+        color: var(--dark-color);
+        margin-bottom: 120px;
+    }
+
+    .form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .sections {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            border-bottom: 1px solid var(--tertiary-color);
+            width: 100%;
+            gap: 35%;
+            padding: 40px 0 55px;
+
+            &:nth-child(2) {
+                .column {
+                    width: 60%;
+                }
+            }
+
+            .column {
+                color: var(--dark-color);
+
+                p {
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                    line-height: 2.935rem;
+                    margin-bottom: 10px;
+                }
+
+                .button-group {
+                    padding-left: 2.5rem;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+
+                    .radio-button {
+                        margin-top: 15px;
+                        padding: 20px 28px;
+                        border: 1px solid var(--tertiary-color);
+                        border-radius: 62px;
+                        cursor: pointer;
+                        background-color: var(--light-color);
+                        text-align: center;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        line-height: 1.9505rem;
+                        color: var(--dark-color);
+
+                        &.active {
+                            background-color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+        }
+
+        .comment-section {
+            display: flex;
+            flex-direction: column;
+
+            .name {
+                font-size: 2.5rem;
+                font-weight: 600;
+                line-height: 2.935rem;
+                margin-bottom: 25px;
+                margin-top: 40px;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                column-gap: 3%;
+
+                .comment-input {
+                    flex: 1 0 calc(40% - 3%);
+                    width: 100%;
+                    border-radius: 13px;
+                    border: 1px solid var(--tertiary-color);
+                    resize: none;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    line-height: 1.409rem;
+                    color: var(--dark-color);
+                    padding: 29px 1.5%;
+
+                    &::placeholder {
+                        color: var(--dark-color);
+                    }
+                }
+
+                .upload-container {
+                    flex: 1 0 calc(60% - 3%);
+                    pointer-events: none;
+                    position: relative;
+                    cursor: pointer;
+
+                    .dashed {
+                        width: 100%;
+                        height: 100%;
+                        pointer-events: fill;
+                    }
+
+                    .upload-content {
+                        position: absolute;
+                        left: 40%;
+                        top: 25%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 11px;
+                    }
+
+                    .label {
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        line-height: 1.409rem;
+                        color: var(--dark-color);
+                    }
+                }
+
+                .send-button {
+                    margin-top: 43px;
+                    flex: 1 0 calc(40% - 3%);
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    line-height: 1.409rem;
+                    color: var(--tertiary-color);
+                    border: 2px solid var(--tertiary-color);
+                    border-radius: 106.38px;
+                    background: none;
+                    padding: 21px;
+                }
+
+                .button-text {
+                    margin-top: 43px;
+                    flex: 1 0 calc(60% - 3%);
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    line-height: 1.45rem;
+                    color: var(--dark-color);
+                    padding-right: 10%;
+
+                    .highlight {
+                        color: #787df7;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

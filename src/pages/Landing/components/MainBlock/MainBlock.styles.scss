@@ -1,0 +1,38 @@
+.main-block {
+    padding: 57px 1.5% 0 6.62%;
+    width: 100%;
+
+    .title {
+        width: 100%;
+        text-indent: 15.5%;
+        font-size: clamp(4rem, 7.5vw, 7.5rem);
+        font-weight: 600;
+        line-height: clamp(5rem, 9.157vw, 9.157rem);
+        vertical-align: top;
+        position: relative;
+        color: var(--tertiary-color);
+        z-index: 2;
+
+        .phone-image {
+            width: 15.5%;
+            height: auto;
+            vertical-align: top;
+            margin: 0.8% 0 92px 4%;
+            filter: drop-shadow(0 35px 25px rgba(0, 0, 0, 0.1));
+        }
+
+        .application-button {
+            position: absolute;
+            left: 0;
+            bottom: 35%;
+            height: 76px !important;
+            width: auto !important;
+            font-size: 1.2rem !important;
+            line-height: 1.409rem !important;
+
+            .arrow-icon {
+                height: 1.2rem !important;
+            }
+        }
+    }
+}

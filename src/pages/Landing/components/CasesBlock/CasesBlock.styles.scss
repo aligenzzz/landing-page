@@ -1,0 +1,135 @@
+.cases-block {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .vertical-nav {
+        background-color: var(--light-color);
+        padding: 360px 5.2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 66px;
+        width: 14.1%;
+
+        .nav-item {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.8785rem;
+            color: var(--dark-color);
+            border: 1px solid var(--light-color);
+            border-radius: 50%;
+            text-align: center;
+            padding: 16px 18px;
+            vertical-align: middle;
+
+            &.active {
+                border-color: var(--dark-color);
+            }
+        }
+    }
+
+    .content {
+        width: 85.9%;
+        background: linear-gradient(
+            111.75deg,
+            var(--gradient-color) 0%,
+            var(--light-color) 100.41%
+        );
+        padding: 52px 7% 80px 4%;
+
+        .case-item {
+            width: 100%;
+
+            .title {
+                font-size: 3.8rem;
+                font-weight: 600;
+                line-height: 4.461rem;
+                color: var(--light-color);
+                width: 100%;
+                text-align: left;
+                margin-bottom: 85px;
+            }
+
+            .case-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                .arrow {
+                    width: 19%;
+                    height: auto;
+                    cursor: pointer;
+                    transform: translateY(-115%);
+                }
+            }
+        }
+
+        .case-footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 3%;
+            margin-top: 100px;
+            padding-left: 4%;
+
+            .line {
+                width: 40.5%;
+                height: 2px;
+                background-color: var(--dark-color);
+                border: none;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 25%;
+                    height: 2.2px;
+                    background-color: var(--light-color);
+                    float: left;
+                }
+            }
+
+            .circles {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 17.5%;
+
+                .circle {
+                    width: 1.75rem;
+                    height: 1.75rem;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    border: 1px solid var(--dark-color);
+                    transition:
+                        background-color 0.3s,
+                        transform 0.3s;
+                    box-sizing: content-box;
+
+                    &.active {
+                        background-color: var(--dark-color);
+                        animation: moveCircle 0.3s ease-in-out forwards;
+
+                        @keyframes moveCircle {
+                            0% {
+                                transform: scale(1);
+                            }
+
+                            50% {
+                                transform: scale(1.2);
+                            }
+
+                            100% {
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
