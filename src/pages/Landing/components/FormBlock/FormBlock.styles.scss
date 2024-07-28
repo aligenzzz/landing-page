@@ -1,166 +1,194 @@
 .form-block {
     width: 100%;
-    padding: 179px 7.39583% 72px;
+    padding: 201px 7.39583% 221px;
 
     .title {
         font-size: 3.8rem;
         font-weight: 600;
         line-height: 4.461rem;
         color: var(--dark-color);
-        margin-bottom: 120px;
+        margin-bottom: 51px;
+    }
+
+    .subtitle {
+        width: 100%;
+        font-size: 2.5rem;
+        font-weight: 500;
+        line-height: 4rem;
+        color: var(--tertiary-color);
+        margin-bottom: 110px;
+        vertical-align: top;
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            cursor: pointer;
+            border-bottom: 2.5px var(--secondary-color) solid;
+        }
     }
 
     .form {
         width: 100%;
-        display: flex;
-        flex-direction: column;
 
-        .sections {
+        .input-container {
+            width: 100%;
             display: flex;
             flex-direction: row;
-            flex-wrap: nowrap;
-            border-bottom: 1px solid var(--tertiary-color);
-            width: 100%;
-            gap: 35%;
-            padding: 40px 0 55px;
+            margin-bottom: 75px;
+            gap: 1.5%;
 
-            &:nth-child(2) {
-                .column {
-                    width: 60%;
-                }
-            }
-
-            .column {
-                color: var(--dark-color);
+            .item {
+                flex: 1;
+                width: 100%;
 
                 p {
+                    width: 100%;
                     font-size: 2.5rem;
                     font-weight: 600;
-                    line-height: 2.935rem;
-                    margin-bottom: 10px;
+                    line-height: 3.0475rem;
+                    color: var(--tertiary-color);
+                    margin-bottom: 22px;
                 }
 
-                .button-group {
-                    padding-left: 2.5rem;
+                input {
+                    width: 100%;
+                    border-radius: 13px;
+                    border: 1px solid var(--tertiary-color);
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    line-height: 1.409rem;
+                    color: var(--tertiary-color);
+                    padding: 37px 3%;
+
+                    &::placeholder {
+                        color: var(--tertiary-color);
+                    }
+                }
+            }
+        }
+
+        .file-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 94px;
+
+            .clip-icon {
+                box-sizing: content-box;
+                padding: 17px;
+                border-radius: 13px;
+                border: 1px solid var(--tertiary-color);
+                margin-right: 1.5%;
+            }
+
+            p {
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: var(--tertiary-color);
+
+                span {
+                    color: rgba(30, 30, 30, 0.44);
+                }
+            }
+        }
+
+        .select-container {
+            margin-bottom: 119px;
+
+            p {
+                font-size: 2.5rem;
+                font-weight: 600;
+                line-height: 3.0475rem;
+                color: var(--tertiary-color);
+                margin-bottom: 31px;
+            }
+
+            .radio-container {
+                width: 65%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 13px;
+                background-color: var(--quaternary-color);
+                padding: 37px 3% 37px 1.5%;
+                flex-wrap: wrap;
+                row-gap: 20px;
+
+                .radio-label {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: var(--tertiary-color);
                     display: flex;
                     flex-direction: row;
-                    flex-wrap: wrap;
-                    gap: 1rem;
+                    align-items: center;
+                    white-space: nowrap;
 
-                    .radio-button {
-                        margin-top: 15px;
-                        padding: 20px 28px;
-                        border: 1px solid var(--tertiary-color);
-                        border-radius: 62px;
+                    input {
+                        position: relative;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        width: 32px;
+                        height: 32px;
+                        border: 2px solid var(--tertiary-color);
+                        border-radius: 50%;
+                        outline: none;
+                        background-color: transparent;
                         cursor: pointer;
-                        background-color: var(--light-color);
-                        text-align: center;
-                        font-size: 1.6rem;
-                        font-weight: 400;
-                        line-height: 1.9505rem;
-                        color: var(--dark-color);
+                        margin-right: 17px;
 
-                        &.active {
-                            background-color: var(--primary-color);
+                        &:checked::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            background: var(--tertiary-color);
+                            transform: translate(-50%, -50%);
                         }
                     }
                 }
             }
         }
 
-        .comment-section {
+        .button-container {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
 
-            .name {
-                font-size: 2.5rem;
+            button {
+                background-color: var(--secondary-color);
+                color: var(--light-color);
                 font-weight: 600;
-                line-height: 2.935rem;
-                margin-bottom: 25px;
-                margin-top: 40px;
+                font-size: 1.2rem;
+                line-height: 1.409rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                border-radius: 66.32px;
+                padding: 23px 4.5%;
+                border: none;
+                text-wrap: nowrap;
+                margin-right: 3%;
             }
 
-            .container {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                column-gap: 3%;
+            p {
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: var(--tertiary-color);
+                line-height: 1.896rem;
 
-                .comment-input {
-                    flex: 1 0 calc(40% - 3%);
-                    width: 100%;
-                    border-radius: 13px;
-                    border: 1px solid var(--tertiary-color);
-                    resize: none;
-                    font-size: 1.2rem;
-                    font-weight: 400;
-                    line-height: 1.409rem;
-                    color: var(--dark-color);
-                    padding: 29px 1.5%;
-
-                    &::placeholder {
-                        color: var(--dark-color);
-                    }
-                }
-
-                .upload-container {
-                    flex: 1 0 calc(60% - 3%);
-                    pointer-events: none;
-                    position: relative;
+                a {
                     cursor: pointer;
-
-                    .dashed {
-                        width: 100%;
-                        height: 100%;
-                        pointer-events: fill;
-                    }
-
-                    .upload-content {
-                        position: absolute;
-                        left: 40%;
-                        top: 25%;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 11px;
-                    }
-
-                    .label {
-                        font-size: 1.2rem;
-                        font-weight: 400;
-                        line-height: 1.409rem;
-                        color: var(--dark-color);
-                    }
-                }
-
-                .send-button {
-                    margin-top: 43px;
-                    flex: 1 0 calc(40% - 3%);
-                    cursor: pointer;
-                    font-size: 1.2rem;
-                    font-weight: 500;
-                    line-height: 1.409rem;
-                    color: var(--tertiary-color);
-                    border: 2px solid var(--tertiary-color);
-                    border-radius: 106.38px;
-                    background: none;
-                    padding: 21px;
-                }
-
-                .button-text {
-                    margin-top: 43px;
-                    flex: 1 0 calc(60% - 3%);
-                    font-size: 1.2rem;
-                    font-weight: 500;
-                    line-height: 1.45rem;
-                    color: var(--dark-color);
-                    padding-right: 10%;
-
-                    .highlight {
-                        color: #787df7;
-                        cursor: pointer;
-                    }
+                    font-weight: 700;
+                    color: #4d9c38;
+                    border-bottom: 1px solid #4d9c38;
                 }
             }
         }

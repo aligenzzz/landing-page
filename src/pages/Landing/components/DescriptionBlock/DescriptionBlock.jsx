@@ -1,18 +1,15 @@
 import React from "react";
 import "./DescriptionBlock.styles.scss";
-import { ReactComponent as GraphTopElement } from "@assets/elements/graph_top.svg";
-import { ReactComponent as GraphBottomElement } from "@assets/elements/graph_bottom.svg";
 
 const DescriptionBlock = () => {
   return (
     <div className="description-block">
       <h2 className="title">Подход к разработке веб-приложений</h2>
       <p className="text">
-        Мы действуем как расширение отделов разработки продуктов в
-        технологических компаниях, обеспечивая удаленное пополнение штата. Наши
-        междисциплинарные команды разработчиков постоянно сотрудничают с
-        собственными отделами и постоянно совершенствуются, обеспечивая полную
-        прозрачность процессов.
+        Мы — команда кастомной разработки, действующая как цех с минимальной
+        административной нагрузкой на технологические процессы. Это позволяет
+        нам предлагать нашим клиентам конкурентные цены на разработку мобильных
+        приложений.
       </p>
       <div className="horizontal-line"></div>
       <h2 className="title">Наши возможности в сфере услуг веб-разработки</h2>
@@ -22,17 +19,6 @@ const DescriptionBlock = () => {
         веб-приложений, который помогает инновационным компаниям и признанным
         брендам достигать своих бизнес-целей.
       </p>
-
-      <div className="vertical-block-container">
-        <div className="vertical-block">
-          <div className="word">SCRUM</div>
-          <div className="line"></div>
-          <div className="word">WATERFALL</div>
-          <GraphTopElement className="graph-top" />
-        </div>
-      </div>
-
-      <GraphBottomElement className="graph-bottom" />
     </div>
   );
 };

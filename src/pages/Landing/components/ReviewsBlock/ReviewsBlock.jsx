@@ -7,32 +7,43 @@ import Client7 from "@assets/images/clients/client7.png";
 import { ReactComponent as NextArrowIcon } from "@assets/icons/next_arrow_green.svg";
 import { ReactComponent as QuoteIcon } from "@assets/icons/quote.svg";
 import CubeElement from "@assets/elements/cube.png";
+import ReviewDocument1 from "@assets/images/reviews/review1.png";
+import ReviewDocument2 from "@assets/images/reviews/review2.png";
+import ReviewDocument3 from "@assets/images/reviews/review3.png";
+import ReviewDocument4 from "@assets/images/reviews/review4.png";
+import { ReactComponent as CloseIcon } from "@assets/icons/close.svg";
 
 const reviews = [
   {
     image: Client2,
     text: "Lorem ipsum dolor sit amet consectetur. Pulvinar neque tellus magna nisl felis vitae. Elit non nunc quam lorem praesent sit quis amet. At velit nunc tristique mauris ac ultricies faucibus dui semper.  ",
+    document: ReviewDocument1,
   },
   {
     image: Client7,
     text: "Lorem ipsum dolor sit amet consectetur. Pulvinar neque tellus magna nisl felis vitae. Elit non nunc quam lorem praesent sit quis amet. At velit nunc tristique mauris ac ultricies faucibus dui semper.  ",
+    document: ReviewDocument2,
   },
   {
     image: Client7,
     text: "Lorem ipsum dolor sit amet consectetur. Pulvinar neque tellus magna nisl felis vitae. Elit non nunc quam lorem praesent sit quis amet. At velit nunc tristique mauris ac ultricies faucibus dui semper.  ",
+    document: ReviewDocument3,
   },
   {
     image: Client1,
     text: "Lorem ipsum dolor sit amet consectetur. Pulvinar neque tellus magna nisl felis vitae. Elit non nunc quam lorem praesent sit quis amet. At velit nunc tristique mauris ac ultricies faucibus dui semper.  ",
+    document: ReviewDocument4,
   },
   {
     image: Client3,
     text: "Lorem ipsum dolor sit amet consectetur. Pulvinar neque tellus magna nisl felis vitae. Elit non nunc quam lorem praesent sit quis amet. At velit nunc tristique mauris ac ultricies faucibus dui semper.  ",
+    document: ReviewDocument1,
   },
 ];
 
 const ReviewsBlock = () => {
   const [startIndex, setStartIndex] = useState(1);
+  const [selectedReview, setSelectedReview] = useState(null);
 
   const nextReviews = () => {
     setStartIndex((prevIndex) => (prevIndex + 1) % reviews.length);
@@ -42,6 +53,14 @@ const ReviewsBlock = () => {
     const reviewIndex = (startIndex + index) % reviews.length;
     return reviews[reviewIndex];
   });
+
+  const handleReviewClick = (review) => {
+    setSelectedReview(review);
+  };
+
+  const closeReview = () => {
+    setSelectedReview(null);
+  };
 
   useEffect(() => {
     const parallax = document.getElementById("parallax");
@@ -76,7 +95,11 @@ const ReviewsBlock = () => {
       <h2 className="title">Отзывы</h2>
       <div className="reviews-container">
         {displayedReviews.map((review, index) => (
-          <div key={index + 1} className="item">
+          <div
+            key={index + 1}
+            className="item"
+            onClick={() => handleReviewClick(review)}
+          >
             <div className="image-container">
               <img
                 src={review.image}
@@ -90,6 +113,19 @@ const ReviewsBlock = () => {
         ))}
         <NextArrowIcon className="next-button" onClick={nextReviews} />
       </div>
+
+      {selectedReview && (
+        <div className="overlay" onClick={closeReview}>
+          <div className="modal">
+            <img
+              src={selectedReview.document}
+              alt="Review's document"
+              className="review-document"
+            />
+            <CloseIcon className="close-button" onClick={closeReview} />
+          </div>
+        </div>
+      )}
 
       <img
         src={CubeElement}

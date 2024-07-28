@@ -58,7 +58,7 @@ const Footer = () => {
       <div className="footer-divider" />
       <div className="footer-bottom">
         <p>
-          Copyright &copy; <span>RIZOFT</span>
+          Copyright &copy; <span>&nbsp;&nbsp;RIZOFT</span>
         </p>
         <p>All rights reserved</p>
       </div>

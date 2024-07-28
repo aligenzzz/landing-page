@@ -1,13 +1,12 @@
 .description-block {
     width: 100%;
     padding: 141px 7.552% 142px 6.4583%;
-    position: relative;
 
     .title {
         font-size: 3.8rem;
         font-weight: 600;
         line-height: 4.461rem;
-        color: var(--dark-color);
+        color: var(--tertiary-color);
 
         &:first-of-type {
             width: 50%;
@@ -24,72 +23,15 @@
         font-size: 1.65rem;
         font-weight: 400;
         line-height: 1.937rem;
-        color: var(--dark-color);
-
-        &:first-of-type {
-            width: 60%;
-        }
-
-        &:nth-of-type(2) {
-            width: 85%;
-        }
+        color: var(--tertiary-color);
+        width: 90%;
     }
 
     .horizontal-line {
         width: 64.583%;
-        height: 1px;
-        background-color: var(--dark-color);
-        margin-top: 81px;
+        height: 0.5px;
+        background-color: var(--tertiary-color);
+        margin-top: 126px;
         margin-bottom: 91px;
-    }
-
-    .vertical-block-container {
-        position: absolute;
-        right: 7.552%;
-        top: calc(141px + 3.8rem);
-        width: 22%;
-
-        .vertical-block {
-            background-color: var(--secondary-color);
-            padding: 35px 18.5px 54px 18px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-radius: 0 39px 39px 39px;
-            width: 100%;
-            position: relative;
-
-            .word {
-                font-size: 2.7rem;
-                font-weight: 700;
-                line-height: 3.17rem;
-                color: var(--light-color);
-            }
-
-            .line {
-                margin-top: 33px;
-                margin-bottom: 50px;
-                background-color: var(--light-color);
-                height: 1px;
-                width: 100%;
-            }
-
-            .graph-top {
-                width: 165%;
-                height: auto;
-                position: absolute;
-                right: 99.8%;
-                top: 0;
-                transform: translateY(-99.9%);
-            }
-        }
-    }
-
-    .graph-bottom {
-        width: 35%;
-        height: auto;
-        position: absolute;
-        right: 1.1%;
-        bottom: -17.5%;
     }
 }

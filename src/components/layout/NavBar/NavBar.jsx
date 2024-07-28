@@ -25,9 +25,13 @@ const NavBar = () => {
               {item.label}
             </Link>
           ))}
+
+          <a className="item phone" href="tel:+375293134627">
+            +375 29 313-46-27
+          </a>
         </div>
 
-        <ApplicationButton />
+        <ApplicationButton text="Заполнить бриф" />
       </nav>
     </div>
   );

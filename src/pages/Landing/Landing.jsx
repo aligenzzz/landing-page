@@ -5,7 +5,9 @@ import {
   DescriptionBlock,
   CasesBlock,
   FormBlock,
-  ServicesBlock,
+  StepsBlock,
+  CooperationBlock,
+  AdvantagesBlock,
   ClientsBlock,
   ReviewsBlock,
   ConnectionBlock,
@@ -18,7 +20,9 @@ const Landing = () => {
       <DescriptionBlock />
       <CasesBlock />
       <FormBlock />
-      <ServicesBlock />
+      <StepsBlock />
+      <CooperationBlock />
+      <AdvantagesBlock />
       <ClientsBlock />
       <ReviewsBlock />
       <ConnectionBlock />

@@ -1,7 +1,7 @@
 .connection-block {
-    background-color: var(--primary-color);
+    background-color: var(--quaternary-color);
     width: 100%;
-    padding: 94px 10.658% 108px 7.03125%;
+    padding: 94px 7.03125% 108px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -11,7 +11,7 @@
         font-size: 3.8rem;
         font-weight: 700;
         line-height: 4.461rem;
-        color: var(--dark-color);
+        color: var(--tertiary-color);
         width: 50%;
     }
 
@@ -22,15 +22,7 @@
         padding: 2% 3% !important;
         border-radius: 71.57px !important;
         line-height: 2.0575rem;
-
-        .arrow-icon {
-            height: 2.3rem;
-            width: auto;
-            padding-left: 4%;
-
-            path {
-                stroke: var(--tertiary-color);
-            }
-        }
+        background-color: transparent !important;
+        width: 28.5% !important;
     }
 }

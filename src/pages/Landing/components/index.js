@@ -2,7 +2,9 @@ import MainBlock from "./MainBlock";
 import DescriptionBlock from "./DescriptionBlock";
 import CasesBlock from "./CasesBlock";
 import FormBlock from "./FormBlock";
-import ServicesBlock from "./ServicesBlock";
+import StepsBlock from "./StepsBlock";
+import CooperationBlock from "./CooperationBlock";
+import AdvantagesBlock from "./AdvantagesBlock";
 import ClientsBlock from "./ClientsBlock";
 import ReviewsBlock from "./ReviewsBlock";
 import ConnectionBlock from "./ConnectionBlock";
@@ -12,7 +14,9 @@ export {
   DescriptionBlock,
   CasesBlock,
   FormBlock,
-  ServicesBlock,
+  StepsBlock,
+  CooperationBlock,
+  AdvantagesBlock,
   ClientsBlock,
   ReviewsBlock,
   ConnectionBlock,

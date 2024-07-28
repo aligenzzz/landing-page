@@ -1,0 +1,60 @@
+.steps-block {
+    width: 100%;
+    background-color: #e9fce6;
+    padding: 114px 7.39583%;
+    margin-bottom: 75px;
+
+    .title {
+        width: 70%;
+        font-size: 3.8rem;
+        color: var(--tertiary-color);
+        font-weight: 600;
+        line-height: 4.461rem;
+        margin-bottom: 65px;
+    }
+
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        .list {
+            width: 50%;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.8785rem;
+            color: var(--tertiary-color);
+            text-wrap: nowrap;
+
+            .item {
+                margin-bottom: 8px;
+                border-radius: 8px;
+                background-color: #f2f2f2;
+                padding: 14px 5%;
+                width: 70%;
+
+                &.selected {
+                    background-color: var(--primary-color);
+                }
+            }
+        }
+
+        .description {
+            width: 50%;
+            color: var(--tertiary-color);
+
+            h3 {
+                font-size: 2rem;
+                font-weight: 700;
+                line-height: 2.348rem;
+                margin-bottom: 22px;
+            }
+
+            p {
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 1.8785rem;
+            }
+        }
+    }
+}

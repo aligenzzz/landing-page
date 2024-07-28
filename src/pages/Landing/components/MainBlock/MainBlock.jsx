@@ -6,11 +6,16 @@ import PhoneImage from "@assets/images/phone.png";
 const MainBlock = () => {
   return (
     <div className="main-block">
-      <h1 className="title">
-        Вот где начинаются ваши свершения
-        <img src={PhoneImage} alt="Phone" className="phone-image" />
+      <div className="main-content">
+        <h1>Разработка мобильных приложений</h1>
+        <p>
+          Мы создаем приложения, которые помогают бизнесу развиваться,
+          зарабатывать больше и увеличивать точки контакта с пользователями.
+        </p>
         <ApplicationButton />
-      </h1>
+
+        <img src={PhoneImage} alt="Phone" className="phone-image" />
+      </div>
     </div>
   );
 };
