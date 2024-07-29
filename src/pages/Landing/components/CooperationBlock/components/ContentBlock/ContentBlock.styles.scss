@@ -13,6 +13,12 @@
         padding: 33.5px 2%;
         display: inline-block;
         margin-bottom: 0;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            font-size: 1.6rem;
+            padding: 20px 5%;
+        }
     }
 
     .content {
@@ -20,12 +26,24 @@
         flex-wrap: wrap;
         padding: 0 2.5% 69px;
 
+        @media (max-width: 916px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 768px) {
+            padding: 0 5% 69px;
+        }
+
         .item {
             color: var(--tertiary-color);
             position: relative;
             box-sizing: border-box;
             margin-top: 56px;
             margin-bottom: 27px;
+
+            @media (max-width: 768px) {
+                margin-top: 30px;
+            }
 
             &:nth-child(n)::after {
                 content: "";
@@ -38,21 +56,23 @@
                 z-index: 1;
             }
 
-            &:nth-child(even) {
-                flex: 0 0 calc(65% - 7%);
-            }
-
-            &:nth-child(odd) {
-                flex: 0 0 calc(40% - 7%);
-                margin-right: 7%;
-
-                &::after {
-                    width: calc(200%);
+            @media (min-width: 917px) {
+                &:nth-child(even) {
+                    flex: 0 0 calc(65% - 7%);
                 }
-            }
 
-            &:nth-last-child(-n + 2)::after {
-                display: none;
+                &:nth-child(odd) {
+                    flex: 0 0 calc(40% - 7%);
+                    margin-right: 7%;
+
+                    &::after {
+                        width: calc(200%);
+                    }
+                }
+
+                &:nth-last-child(-n + 2)::after {
+                    display: none;
+                }
             }
 
             &:last-child::after {
@@ -66,6 +86,13 @@
                 line-height: 2.348rem;
                 width: 80%;
                 min-height: calc(2 * 2.348rem + 30px);
+
+                @media (max-width: 916px) {
+                    width: 100%;
+                    min-height: auto;
+                    padding-bottom: 20px;
+                    font-size: 1.6rem;
+                }
             }
 
             .item-text {
@@ -73,6 +100,10 @@
                 font-size: 1.6rem;
                 font-weight: 400;
                 line-height: 1.8785rem;
+
+                @media (max-width: 768px) {
+                    font-size: 1.4rem;
+                }
             }
         }
     }

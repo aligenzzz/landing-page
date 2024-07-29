@@ -44,12 +44,33 @@ const reviews = [
 const ReviewsBlock = () => {
   const [startIndex, setStartIndex] = useState(1);
   const [selectedReview, setSelectedReview] = useState(null);
+  const [itemsToShow, setItemsToShow] = useState(3);
+
+  useEffect(() => {
+    const updateItemsToShow = () => {
+      const width = window.innerWidth;
+      if (width > 1280) {
+        setItemsToShow(3);
+      } else if (width > 768) {
+        setItemsToShow(2);
+      } else {
+        setItemsToShow(1);
+      }
+    };
+
+    updateItemsToShow();
+
+    window.addEventListener("resize", updateItemsToShow);
+    return () => {
+      window.removeEventListener("resize", updateItemsToShow);
+    };
+  }, []);
 
   const nextReviews = () => {
     setStartIndex((prevIndex) => (prevIndex + 1) % reviews.length);
   };
 
-  const displayedReviews = Array.from({ length: 3 }, (_, index) => {
+  const displayedReviews = Array.from({ length: itemsToShow }, (_, index) => {
     const reviewIndex = (startIndex + index) % reviews.length;
     return reviews[reviewIndex];
   });
@@ -117,12 +138,14 @@ const ReviewsBlock = () => {
       {selectedReview && (
         <div className="overlay" onClick={closeReview}>
           <div className="modal">
-            <img
-              src={selectedReview.document}
-              alt="Review's document"
-              className="review-document"
-            />
-            <CloseIcon className="close-button" onClick={closeReview} />
+            <div className="image-container">
+              <img
+                src={selectedReview.document}
+                alt="Review's document"
+                className="review-document"
+              />
+              <CloseIcon className="close-button" onClick={closeReview} />
+            </div>
           </div>
         </div>
       )}

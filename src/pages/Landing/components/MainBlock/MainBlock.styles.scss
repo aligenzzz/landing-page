@@ -2,10 +2,19 @@
     padding: 57px 1.5% 158px 7%;
     width: 100%;
 
+    @media (max-width: 1024px) {
+        padding-right: 7%;
+        padding-bottom: 70px;
+    }
+
     .main-content {
         width: 100%;
         margin-top: 108px;
         position: relative;
+
+        @media (max-width: 1024px) {
+            margin-top: 58px;
+        }
 
         h1 {
             width: 70%;
@@ -13,6 +22,19 @@
             font-weight: 600;
             line-height: 5.6rem;
             color: var(--tertiary-color);
+
+            @media (max-width: 1024px) {
+                width: 100%;
+                font-size: 3.5rem;
+                line-height: 4rem;
+                font-weight: 700;
+            }
+
+            @media (max-width: 480px) {
+                width: 100%;
+                font-size: 2.7rem;
+                line-height: 3.3rem;
+            }
         }
 
         p {
@@ -23,6 +45,11 @@
             color: var(--tertiary-color);
             margin-top: 38.79px;
             margin-bottom: 114px;
+
+            @media (max-width: 1024px) {
+                width: 100%;
+                margin-bottom: 60px;
+            }
         }
 
         .application-button {
@@ -30,6 +57,11 @@
             width: 20% !important;
             font-size: 1.4rem !important;
             line-height: 1.6685rem !important;
+
+            @media (max-width: 1024px) {
+                width: 100% !important;
+                font-size: 1.8rem !important;
+            }
         }
 
         .phone-image {
@@ -38,6 +70,16 @@
             top: -13%;
             width: 31rem;
             height: auto;
+
+            @media (max-width: 1500px) {
+                width: 28rem;
+                height: auto;
+                top: 0%;
+            }
+
+            @media (max-width: 1024px) {
+                display: none;
+            }
         }
     }
 }

@@ -7,12 +7,26 @@
     align-items: center;
     justify-content: space-between;
 
+    @media (max-width: 768px) {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
     .title {
         font-size: 3.8rem;
         font-weight: 700;
         line-height: 4.461rem;
         color: var(--tertiary-color);
         width: 50%;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+            font-size: 2.8rem;
+            line-height: 3rem;
+        }
     }
 
     .application-button {
@@ -24,5 +38,13 @@
         line-height: 2.0575rem;
         background-color: transparent !important;
         width: 28.5% !important;
+
+        @media (max-width: 1280px) {
+            width: 40% !important;
+        }
+
+        @media (max-width: 768px) {
+            width: 100% !important;
+        }
     }
 }

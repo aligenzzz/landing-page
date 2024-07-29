@@ -2,6 +2,10 @@
     width: 100%;
     padding: 141px 7.552% 142px 6.4583%;
 
+    @media (max-width: 1024px) {
+        padding-top: 71px;
+    }
+
     .title {
         font-size: 3.8rem;
         font-weight: 600;
@@ -11,11 +15,26 @@
         &:first-of-type {
             width: 50%;
             margin-bottom: 74px;
+
+            @media (max-width: 1024px) {
+                width: 100%;
+                margin-bottom: 40px;
+            }
         }
 
         &:nth-of-type(2) {
             width: 80%;
             margin-bottom: 46px;
+
+            @media (max-width: 1024px) {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            font-size: 2.5rem;
+            line-height: 3rem;
         }
     }
 
@@ -25,6 +44,10 @@
         line-height: 1.937rem;
         color: var(--tertiary-color);
         width: 90%;
+
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
     }
 
     .horizontal-line {
@@ -33,5 +56,11 @@
         background-color: var(--tertiary-color);
         margin-top: 126px;
         margin-bottom: 91px;
+
+        @media (max-width: 1024px) {
+            width: 100%;
+            margin-top: 90px;
+            margin-bottom: 60px;
+        }
     }
 }
