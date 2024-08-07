@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/landing-page/static/css/main.5bffe93b.css",
-    "main.js": "/landing-page/static/js/main.2b258090.js",
+    "main.css": "/landing-page/static/css/main.6ba85567.css",
+    "main.js": "/landing-page/static/js/main.4fb91fe5.js",
     "static/js/453.7ee4257d.chunk.js": "/landing-page/static/js/453.7ee4257d.chunk.js",
     "static/media/case.png": "/landing-page/static/media/case.6697e427c3f1b9b0ad4f.png",
     "static/media/review1.png": "/landing-page/static/media/review1.f46bda634712d25c37a9.png",
     "static/media/review3.png": "/landing-page/static/media/review3.df88287b92579cfcfd41.png",
     "static/media/review4.png": "/landing-page/static/media/review4.68546b74602fe837c0fc.png",
     "static/media/review2.png": "/landing-page/static/media/review2.d5de0fdfb8042c7a994e.png",
-    "static/media/phone.png": "/landing-page/static/media/phone.3ef8d823338e2af20c12.png",
+    "static/media/phone.png": "/landing-page/static/media/phone.644b492e70f79aef2c8a.png",
     "static/media/client2.png": "/landing-page/static/media/client2.affaff31f4af95373873.png",
     "static/media/client5.png": "/landing-page/static/media/client5.808387f0735a63b49cea.png",
     "static/media/client4.png": "/landing-page/static/media/client4.d3f032e712ff2fde29fe.png",
@@ -20,7 +20,6 @@
     "static/media/viber.svg": "/landing-page/static/media/viber.5ee50671dc4953621a461565e98db4b4.svg",
     "static/media/instagram.svg": "/landing-page/static/media/instagram.2d221385726fcd43bb11a430295131e6.svg",
     "static/media/calendar.svg": "/landing-page/static/media/calendar.8a478bacc4b049e9519b897eaae82f15.svg",
-    "static/media/message.svg": "/landing-page/static/media/message.b7feff5b5b02b28ee45587df7f6f1e0a.svg",
     "static/media/whatsapp.svg": "/landing-page/static/media/whatsapp.301df30b423fbb1ae12d608f5a27b3bc.svg",
     "static/media/linkedin.svg": "/landing-page/static/media/linkedin.6a60aba16fa0600978e483467c2a8670.svg",
     "static/media/check.svg": "/landing-page/static/media/check.e6069ea1a5eec0a62af3f48e3e261edb.svg",
@@ -36,12 +35,12 @@
     "static/media/next_arrow.svg": "/landing-page/static/media/next_arrow.5db74f2e39f6ab97b2bf3500fcca9b49.svg",
     "static/media/next_arrow_green.svg": "/landing-page/static/media/next_arrow_green.1cdbfa05ab0725ada9aafaeb70d91e57.svg",
     "static/media/menu_open.svg": "/landing-page/static/media/menu_open.e3dadcc46478a87247b7bc12f3b0d18d.svg",
-    "main.5bffe93b.css.map": "/landing-page/static/css/main.5bffe93b.css.map",
-    "main.2b258090.js.map": "/landing-page/static/js/main.2b258090.js.map",
+    "main.6ba85567.css.map": "/landing-page/static/css/main.6ba85567.css.map",
+    "main.4fb91fe5.js.map": "/landing-page/static/js/main.4fb91fe5.js.map",
     "453.7ee4257d.chunk.js.map": "/landing-page/static/js/453.7ee4257d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5bffe93b.css",
-    "static/js/main.2b258090.js"
+    "static/css/main.6ba85567.css",
+    "static/js/main.4fb91fe5.js"
   ]
 }
