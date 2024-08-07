@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { ReactComponent as ClipIcon } from "@assets/icons/clip.svg";
 import "./FormBlock.styles.scss";
+import { useScroll } from "@store/ScrollContext";
+import RoundedButton from "@components/shared/RoundedButton";
 
 const radioOptions = [
   { value: "email", label: "По Email" },
@@ -11,8 +13,10 @@ const radioOptions = [
 ];
 
 const FormBlock = () => {
+  const targetRef = useScroll();
   // eslint-disable-next-line
   const [selectedFile, setSelectedFile] = useState(null);
+  const [contactMethod, setContactMethod] = useState(radioOptions);
 
   const handleClick = async () => {
     try {
@@ -34,15 +38,32 @@ const FormBlock = () => {
     }
   };
 
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    if (/^[\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,6}$/.test(value)) {
+      setContactMethod(
+        radioOptions.filter((option) => option.value === "email"),
+      );
+    } else if (/^\+?\d{9,12}$/.test(value)) {
+      setContactMethod(
+        radioOptions.filter((option) => option.value !== "email"),
+      );
+    } else {
+      setContactMethod(radioOptions);
+    }
+  };
+
   return (
-    <div className="form-block">
-      <h2 className="title">Оставьте заявку</h2>
-      <p className="subtitle">
+    <div className="form-block" ref={targetRef}>
+      <h2 className="title" data-aos="fade-right">
+        Оставьте заявку
+      </h2>
+      <p className="subtitle" data-aos="fade-up">
         или свяжитесь с нами по телефону<br></br>
         <a href="tel:+375293134627">+375 29 313-46-27</a>
       </p>
 
-      <div className="form">
+      <div className="form" data-aos="fade-up">
         <div className="input-container">
           <div className="item">
             <p>Ваше имя</p>
@@ -50,12 +71,15 @@ const FormBlock = () => {
           </div>
           <div className="item">
             <p>Телефон или Email</p>
-            <input placeholder="Телефон или email" />
+            <input
+              placeholder="Телефон или email"
+              onChange={handleInputChange}
+            />
           </div>
         </div>
 
         <div className="file-container">
-          <ClipIcon className="clip-icon" onClick={handleClick} />
+          <ClipIcon className="clip-icon scaled" onClick={handleClick} />
           <p>
             Бриф/ТЗ/Ваши мысли <span>(необязательно)</span>
           </p>
@@ -64,7 +88,7 @@ const FormBlock = () => {
         <div className="select-container">
           <p>Как удобнее всего с вами связаться</p>
           <div className="radio-container">
-            {radioOptions.map((option) => (
+            {contactMethod.map((option) => (
               <label key={option.value} className="radio-label">
                 <input type="radio" name="options" value={option.value} />
                 {option.label}
@@ -74,7 +98,7 @@ const FormBlock = () => {
         </div>
 
         <div className="button-container">
-          <button>Отправить</button>
+          <RoundedButton text="Отправить" />
           <p>
             Заполняя данную форму, вы принимаете условия{" "}
             <a href="/landing-page">соглашения об использовании сайта</a> и

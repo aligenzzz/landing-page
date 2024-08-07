@@ -26,6 +26,21 @@
 
             &.active {
                 border-color: var(--dark-color);
+                animation: moveCircle 0.6s ease-in-out forwards;
+
+                @keyframes moveCircle {
+                    0% {
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        transform: scale(1.1);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                    }
+                }
             }
         }
 
@@ -42,6 +57,8 @@
             var(--light-color) 100.41%
         );
         padding: 52px 7% 80px 4%;
+        transition: background 600ms ease;
+        overflow-x: hidden;
 
         @media (max-width: 1024px) {
             width: 100%;
@@ -73,10 +90,36 @@
                 align-items: center;
 
                 .arrow {
-                    width: 19%;
+                    margin-left: 2rem;
+                    width: 10rem;
                     height: auto;
                     cursor: pointer;
-                    transform: translateY(-115%);
+                }
+
+                .case-enter {
+                    opacity: 0;
+                    transform: translateX(100%);
+                }
+
+                .case-enter-active {
+                    opacity: 1;
+                    transform: translateX(0);
+                    transition:
+                        opacity 600ms,
+                        transform 600ms;
+                }
+
+                .case-exit {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+
+                .case-exit-active {
+                    opacity: 0;
+                    transform: translateX(-100%);
+                    transition:
+                        opacity 600ms,
+                        transform 600ms;
                 }
             }
         }
@@ -94,19 +137,22 @@
                 margin-top: 70px;
             }
 
-            .line {
+            .status-line {
                 width: 40.5%;
                 height: 2px;
-                background-color: var(--dark-color);
                 border: none;
+                display: flex;
+                flex-direction: row;
 
-                &::before {
-                    content: "";
-                    display: block;
+                .line {
                     width: 25%;
-                    height: 2.2px;
-                    background-color: var(--light-color);
-                    float: left;
+                    height: 100%;
+                    background-color: var(--dark-color);
+                    transition: background-color 600ms ease;
+
+                    &.active {
+                        background-color: var(--light-color);
+                    }
                 }
 
                 @media (max-width: 1024px) {
@@ -142,7 +188,7 @@
 
                     &.active {
                         background-color: var(--dark-color);
-                        animation: moveCircle 0.3s ease-in-out forwards;
+                        animation: moveCircle 0.6s ease-in-out forwards;
 
                         @keyframes moveCircle {
                             0% {

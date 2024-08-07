@@ -8,9 +8,11 @@ import "./AdvantagesBlock.styles.scss";
 const AdvantagesBlock = () => {
   return (
     <div className="advantages-block">
-      <h1 className="title">Что получают наши заказчики</h1>
+      <h1 className="title" data-aos="fade-up">
+        Что получают наши заказчики
+      </h1>
       <div className="content">
-        <div className="item">
+        <div className="item" data-aos="fade-right">
           <CheckIcon />
           <p className="item-title">Регулярная отчётность</p>
           <p className="item-text">
@@ -20,7 +22,7 @@ const AdvantagesBlock = () => {
             проекта и обсудить дальнейшие шаги.
           </p>
         </div>
-        <div className="item">
+        <div className="item" data-aos="fade-left">
           <CalendarIcon />
           <p className="item-title">Гарантия на проект — 6 месяцев</p>
           <p className="item-text">
@@ -30,7 +32,7 @@ const AdvantagesBlock = () => {
             период, необходимый для решения проблемы.
           </p>
         </div>
-        <div className="item">
+        <div className="item" data-aos="fade-right">
           <CardIcon />
           <p className="item-title">Гибкая система оплаты</p>
           <p className="item-text">
@@ -40,7 +42,7 @@ const AdvantagesBlock = () => {
             и приёма работ.
           </p>
         </div>
-        <div className="item">
+        <div className="item" data-aos="fade-left">
           <SupportIcon />
           <p className="item-title">Техподдержка и развитие продукта</p>
           <p className="item-text">

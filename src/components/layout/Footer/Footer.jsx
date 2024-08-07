@@ -18,7 +18,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             title="Telegram"
           >
-            <TelegramIcon className="icon" />
+            <TelegramIcon className="icon scaled" />
           </a>
           <a
             href="https://instagram.com"
@@ -26,7 +26,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             title="Instagram"
           >
-            <InstagramIcon className="icon" />
+            <InstagramIcon className="icon scaled" />
           </a>
           <a
             href="https://www.whatsapp.com/"
@@ -34,7 +34,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             title="WhatsApp"
           >
-            <WhatsappIcon className="icon" />
+            <WhatsappIcon className="icon scaled" />
           </a>
           <a
             href="https://linkedln.ru/"
@@ -42,7 +42,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             title="LinkedIn"
           >
-            <LinkedinIcon className="icon" />
+            <LinkedinIcon className="icon scaled" />
           </a>
           <a
             href="https://viber.com"
@@ -50,7 +50,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             title="Viber"
           >
-            <ViberIcon className="icon" />
+            <ViberIcon className="icon scaled" />
           </a>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./StepsBlock.styles.scss";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 const StepsBlock = () => {
   const steps = [
@@ -34,9 +35,11 @@ const StepsBlock = () => {
 
   return (
     <div className="steps-block">
-      <h2 className="title">Этапы разработки мобильного приложения</h2>
+      <h2 className="title" data-aos="fade-right">
+        Этапы разработки мобильного приложения
+      </h2>
       <div className="content">
-        <div className="list">
+        <div className="list" data-aos="fade-right">
           {steps.map((step, index) => (
             <div
               key={index}
@@ -47,9 +50,21 @@ const StepsBlock = () => {
             </div>
           ))}
         </div>
-        <div className="description">
-          <h3>{selectedStep.title}</h3>
-          <p>{selectedStep.description}</p>
+        <div className="description" data-aos="fade-up">
+          <SwitchTransition>
+            <CSSTransition
+              key={selectedStep.title}
+              classNames="fade"
+              addEndListener={(node, done) =>
+                node.addEventListener("transitionend", done, false)
+              }
+            >
+              <div>
+                <h3>{selectedStep.title}</h3>
+                <p>{selectedStep.description}</p>
+              </div>
+            </CSSTransition>
+          </SwitchTransition>
         </div>
       </div>
     </div>

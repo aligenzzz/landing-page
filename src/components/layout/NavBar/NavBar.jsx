@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.styles.scss";
 import { LANDING_ROUTE } from "@utils/constants";
-import ApplicationButton from "@components/shared/ApplicationButton";
+import RoundedButton from "@components/shared/RoundedButton";
 import { ReactComponent as MenuOpenIcon } from "@assets/icons/menu_open.svg";
 import { ReactComponent as MenuCloseIcon } from "@assets/icons/menu_close.svg";
 
@@ -18,27 +18,28 @@ const NavBar = () => {
 
   return (
     <div>
+      <div className="navbar-base"></div>
       <nav className="navbar">
-        <Link to={LANDING_ROUTE} className="logo">
+        <Link to={LANDING_ROUTE} className="logo scaled">
           RIZOFT
         </Link>
 
         <div className="menu">
           {menuItems.map((item, index) => (
-            <Link to={item.route} className="item" key={index}>
+            <Link to={item.route} className="item scaled" key={index}>
               {item.label}
             </Link>
           ))}
 
-          <a className="item phone" href="tel:+375293134627">
+          <a className="item phone scaled" href="tel:+375293134627">
             +375 29 313-46-27
           </a>
         </div>
 
-        <ApplicationButton text="Заполнить бриф" />
+        <RoundedButton text="Заполнить бриф" />
 
         <div
-          className="menu-toggle"
+          className="menu-toggle scaled"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <MenuCloseIcon /> : <MenuOpenIcon />}
@@ -48,7 +49,7 @@ const NavBar = () => {
       {isMobileMenuOpen && (
         <div className="mobile-menu">
           {menuItems.map((item, index) => (
-            <Link to={item.route} className="item" key={index}>
+            <Link to={item.route} className="item scaled" key={index}>
               {item.label}
             </Link>
           ))}

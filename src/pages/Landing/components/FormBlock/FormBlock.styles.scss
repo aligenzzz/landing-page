@@ -1,6 +1,6 @@
 .form-block {
     width: 100%;
-    padding: 201px 7.39583% 221px;
+    padding: 200px 7.39583% 221px;
 
     @media (max-width: 1024px) {
         padding: 100px 7.39583%;
@@ -39,6 +39,12 @@
             text-decoration: none;
             cursor: pointer;
             border-bottom: 2.5px var(--secondary-color) solid;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: var(--primary-color);
+                border-bottom-color: var(--primary-color);
+            }
         }
     }
 
@@ -116,6 +122,7 @@
                 border-radius: 13px;
                 border: 1px solid var(--tertiary-color);
                 margin-right: 1.5%;
+                cursor: pointer;
             }
 
             p {
@@ -171,6 +178,7 @@
                     flex-direction: row;
                     align-items: center;
                     white-space: nowrap;
+                    cursor: pointer;
 
                     input {
                         position: relative;
@@ -185,6 +193,19 @@
                         background-color: transparent;
                         cursor: pointer;
                         margin-right: 0.85rem;
+
+                        &:not(:checked):hover::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 1rem;
+                            height: 1rem;
+                            border-radius: 50%;
+                            background: var(--tertiary-color);
+                            opacity: 0.75;
+                            transform: translate(-50%, -50%);
+                        }
 
                         &:checked::before {
                             content: "";
@@ -214,25 +235,16 @@
                 flex-direction: column;
             }
 
-            button {
-                background-color: var(--secondary-color);
-                color: var(--light-color);
-                font-weight: 600;
-                font-size: 1.2rem;
-                line-height: 1.409rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                border-radius: 66.32px;
-                padding: 23px 4.5%;
-                border: none;
-                text-wrap: nowrap;
-                margin-right: 3%;
+            .rounded-button {
+                font-weight: 600 !important;
+                font-size: 1.2rem !important;
+                line-height: 1.409rem !important;
+                padding: 23px 4.5% !important;
+                margin-right: 3% !important;
 
                 @media (max-width: 1024px) {
-                    width: 100%;
-                    margin-bottom: 20px;
+                    width: 100% !important;
+                    margin-bottom: 20px !important;
                 }
             }
 
@@ -246,7 +258,11 @@
                     cursor: pointer;
                     font-weight: 700;
                     color: #4d9c38;
-                    border-bottom: 1px solid #4d9c38;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: var(--primary-color);
+                    }
                 }
             }
         }

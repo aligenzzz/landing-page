@@ -12,13 +12,17 @@ const clients = [Client1, Client2, Client3, Client4, Client5, Client6];
 const ClientsBlock = () => {
   return (
     <div className="clients-block">
-      <h2 className="title">Нам доверяют</h2>
-      <div className="clients-container">
-        {clients.map((Element, index) => (
-          <div key={index} className="item">
-            <img src={Element} alt={`Client ${index + 1}`} />
-          </div>
-        ))}
+      <h2 className="title" data-aos="fade-right">
+        Нам доверяют
+      </h2>
+      <div className="carousel">
+        <div className="carousel-track">
+          {[...clients, ...clients].map((Element, index) => (
+            <div key={index} className="item">
+              <img src={Element} alt={`Client ${index + 1}`} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

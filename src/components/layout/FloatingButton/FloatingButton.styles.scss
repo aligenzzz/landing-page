@@ -8,10 +8,10 @@
 
     .main-button {
         background: var(--primary-color);
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: var(--tertiary-color);
         font-weight: 700;
-        line-height: 1.409rem;
+        line-height: 1.1rem;
         border: none;
         padding: 16px 21px;
         border-radius: 8px;
@@ -22,52 +22,58 @@
         cursor: pointer;
     }
 
-    .dropdown-menu {
+    .dropdown-wrapper {
+        background: transparent;
         display: none;
-        background-color: #e9fce6;
-        border-radius: 5px;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 24px 15px 0;
-        z-index: 1;
+        padding-right: 10%;
 
-        .dropdown-item {
-            color: var(--tertiary-color);
-            font-size: 0.9rem;
-            font-weight: 500;
-            line-height: 1.0565rem;
-            background-color: transparent;
-            border: none;
-            margin-bottom: 24px;
-            border-radius: 8px;
-            margin-top: 5px;
-            transition: all 0.3s ease-in-out;
-            cursor: pointer;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-start;
-            flex-wrap: nowrap;
-            text-wrap: nowrap;
+        .dropdown-menu {
             width: 100%;
+            display: flex;
+            align-items: flex-end;
+            background-color: #e9fce6;
+            border-radius: 5px;
+            flex-direction: column;
+            padding: 24px 13px 0;
+            z-index: 1;
 
-            svg {
-                width: 1.6rem;
-                height: 1.6rem;
-                margin-right: 17px;
+            .dropdown-item {
+                color: var(--tertiary-color);
+                font-size: 0.9rem;
+                font-weight: 500;
+                line-height: 1.0565rem;
+                background-color: transparent;
+                border: none;
+                margin-bottom: 24px;
+                border-radius: 8px;
+                margin-top: 5px;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                text-wrap: nowrap;
+                width: 100%;
 
-                path {
-                    fill: var(--dark-color);
+                svg {
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    margin-right: 17px;
+
+                    path {
+                        fill: var(--dark-color);
+                    }
                 }
             }
         }
     }
 
-    &:hover .dropdown-menu {
-        display: flex;
-        align-items: flex-end;
+    &:hover .dropdown-wrapper {
+        display: block;
         position: absolute;
-        right: 110%;
+        right: 100%;
         bottom: 0;
     }
 

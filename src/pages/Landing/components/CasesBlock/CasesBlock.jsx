@@ -3,6 +3,7 @@ import "./CasesBlock.styles.scss";
 import { ReactComponent as ArrowIcon } from "@assets/icons/next_arrow.svg";
 import { Case } from "./components";
 import CaseImage from "@assets/images/case.png";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 const cases = [
   {
@@ -55,7 +56,7 @@ const CasesBlock = () => {
   };
 
   return (
-    <div className="cases-block">
+    <div className="cases-block" data-aos="fade-right">
       <div className="vertical-nav">
         {cases.map((_, index) => (
           <div
@@ -73,12 +74,24 @@ const CasesBlock = () => {
         <div className="case-item">
           <h2 className="title">Кейсы</h2>
           <div className="case-container">
-            <Case caseData={cases[activeCase]} />
-            <ArrowIcon className="arrow" onClick={handleNext} />
+            <SwitchTransition>
+              <CSSTransition key={activeCase} timeout={600} classNames="case">
+                <Case caseData={cases[activeCase]} />
+              </CSSTransition>
+            </SwitchTransition>
+            <ArrowIcon className="arrow scaled" onClick={handleNext} />
           </div>
         </div>
         <div className="case-footer">
-          <div className="line"></div>
+          <div className="status-line">
+            {cases.map((_, index) => (
+              <div
+                key={index + 1}
+                className={`line ${activeCase === index ? "active" : ""}`}
+              ></div>
+            ))}
+          </div>
+
           <div className="circles">
             {cases.map((_, index) => (
               <div

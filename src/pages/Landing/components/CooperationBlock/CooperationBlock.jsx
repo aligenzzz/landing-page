@@ -35,7 +35,9 @@ const secondContentData = [
 const CooperationBlock = () => {
   return (
     <div className="cooperation-block">
-      <h1 className="title">Форматы сотрудничества</h1>
+      <h1 className="title" data-aos="fade-right">
+        Форматы сотрудничества
+      </h1>
       <ContentBlock
         title="Разработка приложения с нуля:"
         contentData={firstContentData}

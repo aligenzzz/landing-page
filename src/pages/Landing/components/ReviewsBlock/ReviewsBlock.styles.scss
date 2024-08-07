@@ -1,6 +1,6 @@
 .reviews-block {
     width: 100%;
-    padding: 59px 7.8125% 270px 7.03125%;
+    padding: 59px 7.8125% 300px 7.03125%;
     position: relative;
     margin-bottom: 79px;
 
@@ -33,45 +33,91 @@
         gap: 8%;
         padding-left: 5%;
 
-        .item {
-            width: calc(33.33% - 8%);
-            border: 1px solid var(--dark-color);
-            border-radius: 7.96px;
+        .reviews-list {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 28px 3%;
-            gap: 16px;
-            cursor: pointer;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 8%;
 
-            @media (max-width: 1280px) {
-                width: calc(50% - 8%);
-            }
-
-            @media (max-width: 768px) {
-                width: 100%;
-            }
-
-            .image-container {
-                width: 100%;
-                height: 100px;
-                overflow: hidden;
+            .item {
+                width: calc(33.33% - 8%);
+                border: 1px solid var(--dark-color);
+                border-radius: 7.96px;
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
+                padding: 28px 3%;
+                gap: 16px;
 
-                .image {
-                    width: auto;
-                    height: 100%;
-                    object-fit: cover;
+                &.animate {
+                    animation: zoomInOut 1s forwards;
                 }
-            }
 
-            .text {
-                font-size: 0.9285rem;
-                font-weight: 500;
-                line-height: 1.09rem;
-                color: var(--dark-color);
-                min-height: 12.25rem;
+                @keyframes zoomInOut {
+                    0% {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        opacity: 1;
+                        transform: scale(1.02);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+
+                @media (max-width: 1280px) {
+                    width: calc(50% - 8%);
+                }
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+
+                .image-container {
+                    width: 100%;
+                    height: 100px;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+
+                    .image {
+                        width: auto;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .text {
+                    font-size: 0.9285rem;
+                    font-weight: 500;
+                    line-height: 1.09rem;
+                    color: var(--dark-color);
+                    min-height: 12.25rem;
+                }
+
+                .learn-more {
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    color: var(--secondary-color);
+                    text-decoration: underline;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                    transition:
+                        color 0.3s ease,
+                        transform 0.3s ease;
+
+                    &:hover {
+                        color: var(--primary-color);
+                        transform: scale(1.05);
+                    }
+                }
             }
         }
 
@@ -133,16 +179,51 @@
         width: 14%;
         height: auto;
         position: absolute;
-        top: 12.25%;
-        right: 17%;
+        z-index: -1;
+        animation: topMove 20s infinite linear;
+
+        @keyframes topMove {
+            0%,
+            100% {
+                right: 8%;
+                top: 4%;
+            }
+
+            35% {
+                right: 17%;
+                top: 15%;
+            }
+
+            65% {
+                right: 22%;
+                top: 8%;
+            }
+        }
     }
 
     .bottom-cube {
         width: 14%;
         height: auto;
         position: absolute;
-        bottom: -1%;
-        left: 1%;
         z-index: -1;
+        animation: bottomMove 20s infinite linear;
+
+        @keyframes bottomMove {
+            0%,
+            100% {
+                left: 1%;
+                bottom: -2%;
+            }
+
+            35% {
+                left: 10%;
+                bottom: 9%;
+            }
+
+            65% {
+                left: 15%;
+                bottom: 2%;
+            }
+        }
     }
 }

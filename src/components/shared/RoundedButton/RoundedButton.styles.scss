@@ -1,4 +1,4 @@
-.application-button {
+.rounded-button {
     box-sizing: border-box;
     background-color: var(--secondary-color);
     color: var(--light-color);
@@ -13,4 +13,12 @@
     padding: 1.1% 1.2%;
     border: none;
     text-wrap: nowrap;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
 }

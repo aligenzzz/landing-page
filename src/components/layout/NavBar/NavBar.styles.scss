@@ -1,3 +1,10 @@
+.navbar-base {
+    box-sizing: border-box;
+    background-color: var(--light-color);
+    width: 100%;
+    height: 146px;
+}
+
 .navbar {
     height: 146px;
     width: 100%;
@@ -7,6 +14,9 @@
     justify-content: space-between;
     padding: 43px 7.083% 42.52px;
     align-items: center;
+    position: fixed;
+    z-index: 50;
+    transform: translateY(-101%);
 
     .logo {
         font-family: "Poppins", sans-serif;
@@ -44,7 +54,7 @@
         }
     }
 
-    .application-button {
+    .rounded-button {
         @media (max-width: 1280px) {
             display: none;
         }

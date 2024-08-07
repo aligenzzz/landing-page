@@ -12,10 +12,11 @@ import {
   ReviewsBlock,
   ConnectionBlock,
 } from "./components";
+import { ScrollProvider } from "@store/ScrollContext";
 
 const Landing = () => {
   return (
-    <>
+    <ScrollProvider>
       <MainBlock />
       <DescriptionBlock />
       <CasesBlock />
@@ -26,7 +27,7 @@ const Landing = () => {
       <ClientsBlock />
       <ReviewsBlock />
       <ConnectionBlock />
-    </>
+    </ScrollProvider>
   );
 };
 
