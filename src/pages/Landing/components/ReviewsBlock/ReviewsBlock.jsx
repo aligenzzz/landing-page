@@ -12,6 +12,7 @@ import ReviewDocument2 from "@assets/images/reviews/review2.png";
 import ReviewDocument3 from "@assets/images/reviews/review3.png";
 import ReviewDocument4 from "@assets/images/reviews/review4.png";
 import { ReactComponent as CloseIcon } from "@assets/icons/close.svg";
+import { useSwipeable } from "react-swipeable";
 
 const reviews = [
   {
@@ -106,13 +107,17 @@ const ReviewsBlock = () => {
     };
   }, [selectedReview]);
 
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: nextReviews,
+  });
+
   return (
     <div className="reviews-block" id="parallax">
       <h2 className="title" data-aos="fade-right">
         Отзывы
       </h2>
       <div className="reviews-container" data-aos="fade-up">
-        <div className="reviews-list">
+        <div className="reviews-list" {...swipeHandlers}>
           {displayedReviews.map((review, index) => (
             <div key={index + 1} className={`item ${animate ? "animate" : ""}`}>
               <div className="image-container">
@@ -140,7 +145,7 @@ const ReviewsBlock = () => {
       {selectedReview && (
         <div className="overlay" onClick={closeReview}>
           <div className="modal">
-            <div className="image-container">
+            <div className="image-container" onClick={closeReview}>
               <img
                 src={selectedReview.document}
                 alt="Review's document"

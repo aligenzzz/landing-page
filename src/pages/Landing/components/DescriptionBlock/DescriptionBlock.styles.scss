@@ -1,9 +1,16 @@
 .description-block {
     width: 100%;
     padding: 141px 7.552% 142px 6.4583%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 
     @media (max-width: 1024px) {
         padding-top: 71px;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 60px;
+        padding-bottom: 100px;
     }
 
     .title {
@@ -35,6 +42,10 @@
         @media (max-width: 1024px) {
             font-size: 2.5rem;
             line-height: 3rem;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 2.4rem;
         }
     }
 

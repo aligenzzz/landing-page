@@ -3,9 +3,14 @@
     padding: 59px 7.8125% 300px 7.03125%;
     position: relative;
     margin-bottom: 79px;
+    overflow-x: hidden;
+
+    @media (max-width: 1024px) {
+        padding: 59px 7.8125% 300px;
+    }
 
     @media (max-width: 768px) {
-        padding-bottom: 60px;
+        padding-bottom: 140px;
     }
 
     .title {
@@ -23,6 +28,10 @@
         @media (max-width: 768px) {
             margin-bottom: 60px;
         }
+
+        @media (max-width: 280px) {
+            font-size: 2.4rem;
+        }
     }
 
     .reviews-container {
@@ -32,6 +41,11 @@
         width: 100%;
         gap: 8%;
         padding-left: 5%;
+        overflow-x: visible;
+
+        @media (max-width: 1024px) {
+            padding-left: 0;
+        }
 
         .reviews-list {
             display: flex;
@@ -47,8 +61,12 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                padding: 28px 3%;
+                padding: 1.4rem 3%;
                 gap: 16px;
+
+                @media (max-width: 768px) {
+                    padding: 1.5rem 7% 3.5rem;
+                }
 
                 &.animate {
                     animation: zoomInOut 1s forwards;
@@ -125,6 +143,10 @@
             cursor: pointer;
             height: 3rem;
             width: 3rem;
+
+            @media (max-width: 1024px) {
+                display: none;
+            }
         }
     }
 
@@ -143,24 +165,20 @@
         flex-wrap: nowrap;
 
         .modal {
-            margin: 100px;
-            padding: 130px;
+            padding: 200px 0 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 500px;
 
             .image-container {
                 position: relative;
+                width: 100%;
 
                 .review-document {
-                    width: auto;
-                    height: calc(100vh - 260px);
+                    width: 100%;
                     object-fit: contain;
-
-                    @media (max-width: 768px) {
-                        height: calc(100vh - 500px);
-                    }
-
-                    @media (max-width: 480px) {
-                        height: calc(100vh - 750px);
-                    }
                 }
 
                 .close-button {
@@ -168,8 +186,12 @@
                     top: 0px;
                     right: -10%;
                     cursor: pointer;
-                    width: 24px;
-                    height: 24px;
+                    width: 1.2rem;
+                    height: 1.2rem;
+
+                    @media (max-width: 768px) {
+                        display: none;
+                    }
                 }
             }
         }
@@ -207,6 +229,10 @@
         position: absolute;
         z-index: -1;
         animation: bottomMove 20s infinite linear;
+
+        @media (max-width: 768px) {
+            transform: translateY(-20px);
+        }
 
         @keyframes bottomMove {
             0%,

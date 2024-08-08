@@ -4,6 +4,7 @@ import { ReactComponent as ArrowIcon } from "@assets/icons/next_arrow.svg";
 import { Case } from "./components";
 import CaseImage from "@assets/images/case.png";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
+import { useSwipeable } from "react-swipeable";
 
 const cases = [
   {
@@ -55,6 +56,10 @@ const CasesBlock = () => {
     setActiveCase((prev) => (prev + 1) % cases.length);
   };
 
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: handleNext,
+  });
+
   return (
     <div className="cases-block" data-aos="fade-right">
       <div className="vertical-nav">
@@ -73,7 +78,7 @@ const CasesBlock = () => {
       >
         <div className="case-item">
           <h2 className="title">Кейсы</h2>
-          <div className="case-container">
+          <div className="case-container" {...swipeHandlers}>
             <SwitchTransition>
               <CSSTransition key={activeCase} timeout={600} classNames="case">
                 <Case caseData={cases[activeCase]} />

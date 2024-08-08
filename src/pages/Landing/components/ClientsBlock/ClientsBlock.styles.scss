@@ -4,6 +4,10 @@
     background-color: var(--quaternary-color);
     overflow: hidden;
 
+    @media (max-width: 768px) {
+        padding-top: 100px;
+    }
+
     @media (max-width: 1024px) {
         padding-top: 40px;
         padding-bottom: 60px;
@@ -21,12 +25,20 @@
             line-height: 3rem;
             margin-bottom: 0;
         }
+
+        @media (max-width: 280px) {
+            font-size: 2.4rem;
+        }
     }
 
     .carousel {
         width: 100%;
         margin-top: 60px;
         overflow: hidden;
+
+        @media (max-width: 1024px) {
+            margin-top: 30px;
+        }
 
         .carousel-track {
             display: flex;

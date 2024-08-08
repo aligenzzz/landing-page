@@ -21,8 +21,6 @@
     &:focus {
         outline: none;
     }
-
-    /* overflow-x: hidden; */
 }
 
 html {
@@ -38,6 +36,14 @@ html {
 
     @media (max-width: 480px) {
         font-size: 14px;
+    }
+
+    @media (max-width: 240px) {
+        font-size: 10px;
+    }
+
+    @media (max-width: 180px) {
+        font-size: 8px;
     }
 }
 

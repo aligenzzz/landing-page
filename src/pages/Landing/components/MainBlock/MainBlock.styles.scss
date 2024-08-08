@@ -2,6 +2,11 @@
     padding: 57px 1.5% 158px 7%;
     width: 100%;
 
+    @media (max-width: 480px) {
+        padding-top: 20px;
+        padding-bottom: 80px;
+    }
+
     @media (max-width: 1024px) {
         padding-right: 7%;
         padding-bottom: 70px;
@@ -31,8 +36,12 @@
             }
 
             @media (max-width: 480px) {
-                width: 100%;
                 font-size: 2.7rem;
+                line-height: 3.3rem;
+            }
+
+            @media (max-width: 280px) {
+                font-size: 2.6rem;
                 line-height: 3.3rem;
             }
         }
@@ -50,6 +59,10 @@
                 width: 100%;
                 margin-bottom: 60px;
             }
+
+            @media (max-width: 240px) {
+                margin-bottom: 30px;
+            }
         }
 
         .rounded-button {
@@ -58,9 +71,27 @@
             font-size: 1.4rem !important;
             line-height: 1.6685rem !important;
 
+            @media (max-width: 1440px) {
+                width: 30% !important;
+            }
+
             @media (max-width: 1024px) {
-                width: 100% !important;
+                width: 90% !important;
                 font-size: 1.8rem !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+
+            @media (max-width: 768px) {
+                width: 100% !important;
+                height: 70px !important;
+            }
+
+            @media (max-width: 280px) {
+                height: 50px !important;
+                text-wrap: wrap !important;
+                line-height: 1.4rem !important;
+                font-size: 1.6rem !important;
             }
         }
 
