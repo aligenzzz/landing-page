@@ -5,12 +5,12 @@
 
     .vertical-nav {
         background-color: var(--light-color);
-        padding: 360px 5.2%;
+        padding: 18rem 5.2%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        gap: 66px;
+        gap: 3.3rem;
         width: 14.1%;
 
         .nav-item {
@@ -21,8 +21,9 @@
             border: 1px solid var(--light-color);
             border-radius: 50%;
             text-align: center;
-            padding: 16px 18px;
+            padding: 0.8rem 0.8rem;
             vertical-align: middle;
+            cursor: pointer;
 
             &.active {
                 border-color: var(--dark-color);
@@ -56,7 +57,7 @@
             var(--gradient-color) 0%,
             var(--light-color) 100.41%
         );
-        padding: 52px 7% 80px 4%;
+        padding: 2.6rem 7% 4rem 4%;
         transition: background 600ms ease;
         overflow-x: hidden;
 
@@ -74,17 +75,17 @@
                 color: var(--light-color);
                 width: 100%;
                 text-align: left;
-                margin-bottom: 85px;
+                margin-bottom: 3.5rem;
 
                 @media (max-width: 1024px) {
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                     line-height: 3rem;
-                    margin-bottom: 55px;
                 }
 
                 @media (max-width: 768px) {
-                    margin-bottom: 20px;
-                    font-size: 2.8rem;
+                    font-size: 1.8rem;
+                    line-height: 2.2rem;
+                    margin-bottom: 2rem;
                 }
             }
 
@@ -139,12 +140,8 @@
             justify-content: center;
             align-items: center;
             gap: 3%;
-            margin-top: 100px;
+            margin-top: 5rem;
             padding-left: 4%;
-
-            @media (max-width: 1024px) {
-                margin-top: 70px;
-            }
 
             .status-line {
                 width: 40.5%;
@@ -180,14 +177,6 @@
                     width: 35%;
                 }
 
-                @media (max-width: 768px) {
-                    width: 50%;
-                }
-
-                @media (max-width: 480px) {
-                    width: 70%;
-                }
-
                 .circle {
                     width: 1.75rem;
                     height: 1.75rem;
@@ -198,6 +187,12 @@
                         background-color 0.3s,
                         transform 0.3s;
                     box-sizing: content-box;
+                    cursor: pointer;
+
+                    @media (max-width: 768px) {
+                        width: 1.25rem;
+                        height: 1.25rem;
+                    }
 
                     &.active {
                         background-color: var(--dark-color);

@@ -10,7 +10,7 @@ module.exports = {
       "@utils": resolvePath("./src/utils"),
       "@assets": resolvePath("./src/assets"),
       "@root": resolvePath("./src"),
-      "@store": resolvePath("./src/store"),
+      "@hook": resolvePath("./src/hook"),
     },
   },
 };

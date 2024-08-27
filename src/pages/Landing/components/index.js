@@ -3,7 +3,7 @@ import DescriptionBlock from "./DescriptionBlock";
 import CasesBlock from "./CasesBlock";
 import FormBlock from "./FormBlock";
 import StepsBlock from "./StepsBlock";
-import CooperationBlock from "./CooperationBlock";
+import MethodologyBlock from "./MethodologyBlock";
 import AdvantagesBlock from "./AdvantagesBlock";
 import ClientsBlock from "./ClientsBlock";
 import ReviewsBlock from "./ReviewsBlock";
@@ -15,7 +15,7 @@ export {
   CasesBlock,
   FormBlock,
   StepsBlock,
-  CooperationBlock,
+  MethodologyBlock,
   AdvantagesBlock,
   ClientsBlock,
   ReviewsBlock,

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ReactComponent as ClipIcon } from "@assets/icons/clip.svg";
 import "./FormBlock.styles.scss";
-import { useScroll } from "@store/ScrollContext";
 import RoundedButton from "@components/shared/RoundedButton";
 
 const radioOptions = [
@@ -13,7 +12,6 @@ const radioOptions = [
 ];
 
 const FormBlock = () => {
-  const targetRef = useScroll();
   // eslint-disable-next-line
   const [selectedFile, setSelectedFile] = useState(null);
   const [contactMethod, setContactMethod] = useState(radioOptions);
@@ -54,7 +52,7 @@ const FormBlock = () => {
   };
 
   return (
-    <div className="form-block" ref={targetRef}>
+    <div className="form-block" id="form-block">
       <h2 className="title" data-aos="fade-right">
         Оставьте заявку
       </h2>

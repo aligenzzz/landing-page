@@ -1,0 +1,116 @@
+.dark-base {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 500;
+    background: rgba(20, 16, 16, 0.97);
+    height: 101%;
+    width: 100%;
+}
+
+.info-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .close-button {
+        position: absolute;
+        right: 5rem;
+        top: 5rem;
+        padding: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s;
+
+        svg {
+            width: 2rem;
+            height: auto;
+        }
+
+        &:hover {
+            background: none;
+            border: none;
+            transform: scale(0.75);
+        }
+
+        path {
+            fill: var(--light-color);
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .modal-content {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: visible;
+        overflow-x: hidden;
+        background: none;
+        padding: 0 5.4%;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--light-color);
+            margin: 0 1.9% 0 8%;
+            gap: 8%;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                margin: 0;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 3rem;
+                font-weight: 600;
+                letter-spacing: 0.15rem;
+
+                @media (max-width: 768px) {
+                    text-align: left;
+                    width: 100%;
+                    font-size: 2.5rem;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                text-align: left;
+                line-height: 1.219rem;
+                font-weight: 400;
+
+                @media (max-width: 768px) {
+                    font-size: 1.125rem;
+                    line-height: 1.37125rem;
+                    width: 100%;
+                }
+            }
+        }
+
+        .body {
+            padding-top: 5.77vh;
+            overflow-x: auto;
+
+            @media (max-width: 768px) {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}

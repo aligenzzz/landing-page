@@ -1,24 +1,19 @@
 .main-block {
-    padding: 57px 1.5% 158px 7%;
+    padding: 2.85rem 1.5% 7.9rem 7%;
     width: 100%;
-
-    @media (max-width: 480px) {
-        padding-top: 20px;
-        padding-bottom: 80px;
-    }
 
     @media (max-width: 1024px) {
         padding-right: 7%;
-        padding-bottom: 70px;
+        padding-bottom: 5rem;
     }
 
     .main-content {
         width: 100%;
-        margin-top: 108px;
+        margin-top: 5.4rem;
         position: relative;
 
-        @media (max-width: 1024px) {
-            margin-top: 58px;
+        @media (max-width: 768px) {
+            margin-top: 3rem;
         }
 
         h1 {
@@ -35,14 +30,9 @@
                 font-weight: 700;
             }
 
-            @media (max-width: 480px) {
-                font-size: 2.7rem;
-                line-height: 3.3rem;
-            }
-
-            @media (max-width: 280px) {
-                font-size: 2.6rem;
-                line-height: 3.3rem;
+            @media (max-width: 768px) {
+                font-size: 2.5rem;
+                line-height: 2.75rem;
             }
         }
 
@@ -52,68 +42,52 @@
             font-weight: 400;
             line-height: 2.25rem;
             color: var(--tertiary-color);
-            margin-top: 38.79px;
-            margin-bottom: 114px;
+            margin-top: 1.9395rem;
+            margin-bottom: 5.7rem;
 
             @media (max-width: 1024px) {
                 width: 100%;
-                margin-bottom: 60px;
             }
 
-            @media (max-width: 240px) {
-                margin-bottom: 30px;
+            @media (max-width: 768px) {
+                margin-bottom: 3.5rem;
             }
         }
 
         .rounded-button {
-            height: 90px !important;
+            height: 4.5rem !important;
             width: 20% !important;
             font-size: 1.4rem !important;
-            line-height: 1.6685rem !important;
+            line-height: 1.6rem !important;
 
             @media (max-width: 1440px) {
                 width: 30% !important;
             }
 
             @media (max-width: 1024px) {
-                width: 90% !important;
-                font-size: 1.8rem !important;
+                width: 80% !important;
                 justify-content: center !important;
                 align-items: center !important;
             }
 
             @media (max-width: 768px) {
                 width: 100% !important;
-                height: 70px !important;
-            }
-
-            @media (max-width: 280px) {
-                height: 50px !important;
-                text-wrap: wrap !important;
-                line-height: 1.4rem !important;
-                font-size: 1.6rem !important;
             }
         }
 
         .phone-wrapper {
             position: absolute;
-            right: 5%;
-            top: -10%;
-            width: 30rem;
+            right: 10%;
+            top: 0%;
+            width: 20rem;
             height: auto;
-
-            @media (max-width: 1500px) {
-                width: 28rem;
-                height: auto;
-                top: 0%;
-            }
 
             @media (max-width: 1024px) {
                 display: none;
             }
 
             .phone {
-                width: 30rem;
+                width: 20rem;
                 height: auto;
                 position: relative;
 
@@ -153,7 +127,7 @@
                 }
 
                 .phone-image {
-                    width: 30rem;
+                    width: 20rem;
                     height: auto;
                     animation: rotate 8s linear infinite;
 

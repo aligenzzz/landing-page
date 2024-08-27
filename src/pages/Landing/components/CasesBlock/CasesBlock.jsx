@@ -2,50 +2,53 @@ import React, { useState } from "react";
 import "./CasesBlock.styles.scss";
 import { ReactComponent as ArrowIcon } from "@assets/icons/next_arrow.svg";
 import { Case } from "./components";
-import CaseImage from "@assets/images/case.png";
+import HuntPriceImage from "@assets/images/cases/hunt_price.png";
+import MiLogisticImage from "@assets/images/cases/mi_logistic.png";
+import BabyHelperImage from "@assets/images/cases/baby_helper.png";
+import FoodTechImage from "@assets/images/cases/food_tech.png";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { useSwipeable } from "react-swipeable";
 
 const cases = [
   {
-    name: "Кейс 1",
+    name: "BabyHelper",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Cras molestie scelerisque ornare aliquam nisl id amet dolor non.Lorem ipsum dolor sit amet consectetur. Cras molestie scelerisque ornare aliquam nisl id amet dolor non.",
-    image: CaseImage,
-    rating: "5",
-    age: "17 +",
-    category: "Автомобили",
-    gradient: "#6eec4e",
+      "Реализация фронтенд части мобильного приложения, связанного со вскармливанием ребенка, контролем за весом, фиксирование динамики роста, получением консультаций, а также интеграцией ИИ чата с консультацией.",
+    image: BabyHelperImage,
+    category: "Приложения",
+    theme: "Здоровье",
+    concept: "MVP",
+    gradient: "#ff7d6a",
   },
   {
-    name: "Кейс 2",
+    name: "FoodTech",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Cras molestie scelerisque ornare aliquam nisl id amet dolor non.Lorem ipsum dolor sit amet consectetur. Cras molestie scelerisque ornare aliquam nisl id amet dolor non.",
-    image: CaseImage,
-    rating: "4",
-    age: "16 +",
-    category: "Автомобили",
-    gradient: "#77dd77",
+      "Реализация приложения по доставке морепродуктов под ключ: регистрация/авторизация, каталог товаров, описание товаров, личный кабинет, платежная система.",
+    image: FoodTechImage,
+    category: "Приложения",
+    theme: "Фудтех",
+    concept: "eComm",
+    gradient: "#0a7f90",
   },
   {
-    name: "Кейс 3",
+    name: "HuntPrice",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Cras molestie scelerisque ornare aliquam nisl id amet dolor non.Lorem ipsum dolor sit amet consectetur. Cras molestie scelerisque ornare aliquam nisl id amet dolor non.",
-    image: CaseImage,
-    rating: "5",
-    age: "12 +",
-    category: "Автомобили",
-    gradient: "#31aa12",
+      "Приложение-агрегатор, которое объединяет автомобильные ресурсы России, предоставляет достоверные отчеты и помогает пользователям принимать информированные решения о покупке автомобилей.",
+    image: HuntPriceImage,
+    category: "Приложения",
+    theme: "Авто",
+    concept: "MVP",
+    gradient: "#f49521",
   },
   {
-    name: "Кейс 4",
+    name: "MiLogistic",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Cras molestie scelerisque ornare aliquam nisl id amet dolor non.Lorem ipsum dolor sit amet consectetur. Cras molestie scelerisque ornare aliquam nisl id amet dolor non.",
-    image: CaseImage,
-    rating: "3",
-    age: "14 +",
-    category: "Автомобили",
-    gradient: "#228b22",
+      "Реализация функций регистрации (авторизации), разработка функционала карт, системы бронирования и личного кабинета, проработка логики ролей (водитель, администратор, пользователь).",
+    image: MiLogisticImage,
+    category: "Приложения",
+    theme: "Логистика",
+    concept: "-",
+    gradient: "#aed582",
   },
 ];
 
@@ -56,17 +59,22 @@ const CasesBlock = () => {
     setActiveCase((prev) => (prev + 1) % cases.length);
   };
 
+  const handleCaseSelect = (index) => {
+    setActiveCase(index);
+  };
+
   const swipeHandlers = useSwipeable({
     onSwipedLeft: handleNext,
   });
 
   return (
-    <div className="cases-block" data-aos="fade-right">
+    <div className="cases-block" data-aos="fade-right" id="cases">
       <div className="vertical-nav">
         {cases.map((_, index) => (
           <div
             key={index + 1}
             className={`nav-item ${activeCase === index ? "active" : ""}`}
+            onClick={() => handleCaseSelect(index)}
           >
             {`0${index + 1}`}
           </div>
@@ -102,6 +110,7 @@ const CasesBlock = () => {
               <div
                 key={index + 1}
                 className={`circle ${activeCase === index ? "active" : ""}`}
+                onClick={() => handleCaseSelect(index)}
               ></div>
             ))}
           </div>

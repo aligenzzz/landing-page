@@ -1,16 +1,11 @@
 .clients-block {
     width: 100%;
-    padding: 60px 7.39583% 140px;
+    padding: 3rem 7.39583% 7rem;
     background-color: var(--quaternary-color);
     overflow: hidden;
 
     @media (max-width: 768px) {
-        padding-top: 100px;
-    }
-
-    @media (max-width: 1024px) {
-        padding-top: 40px;
-        padding-bottom: 60px;
+        padding-bottom: 4rem;
     }
 
     .title {
@@ -18,27 +13,23 @@
         font-weight: 600;
         line-height: 4.461rem;
         color: var(--dark-color);
-        margin-bottom: 53px;
+        margin-bottom: 2.65rem;
 
         @media (max-width: 1024px) {
             font-size: 2.5rem;
             line-height: 3rem;
-            margin-bottom: 0;
         }
 
-        @media (max-width: 280px) {
-            font-size: 2.4rem;
+        @media (max-width: 768px) {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
         }
     }
 
     .carousel {
         width: 100%;
-        margin-top: 60px;
+        margin-top: 3rem;
         overflow: hidden;
-
-        @media (max-width: 1024px) {
-            margin-top: 30px;
-        }
 
         .carousel-track {
             display: flex;
@@ -46,7 +37,7 @@
             animation: scroll 20s linear infinite;
 
             .item {
-                padding: 20px 3rem;
+                padding: 1rem 3rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;

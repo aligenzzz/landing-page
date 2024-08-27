@@ -11,7 +11,7 @@ const clients = [Client1, Client2, Client3, Client4, Client5, Client6];
 
 const ClientsBlock = () => {
   return (
-    <div className="clients-block">
+    <div className="clients-block" id="clients">
       <h2 className="title" data-aos="fade-right">
         Нам доверяют
       </h2>

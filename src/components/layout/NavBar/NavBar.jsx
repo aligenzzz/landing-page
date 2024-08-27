@@ -1,32 +1,48 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.styles.scss";
-import { LANDING_ROUTE } from "@utils/constants";
+import { scrollToBlock } from "@utils/scrolling";
 import RoundedButton from "@components/shared/RoundedButton";
 import { ReactComponent as MenuOpenIcon } from "@assets/icons/menu_open.svg";
 import { ReactComponent as MenuCloseIcon } from "@assets/icons/menu_close.svg";
+import { useBlockScrolling } from "@hook/scrolling";
 
 const menuItems = [
-  { label: "О нас", route: LANDING_ROUTE },
-  { label: "Кейсы", route: LANDING_ROUTE },
-  { label: "Наши клиенты", route: LANDING_ROUTE },
-  { label: "Отзывы", route: LANDING_ROUTE },
+  { label: "О нас", id: "about-us" },
+  { label: "Кейсы", id: "cases" },
+  { label: "Наши клиенты", id: "clients" },
+  { label: "Отзывы", id: "reviews" },
 ];
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const handleClick = () => {
+    window.location.href = "https://forms.gle/yn6QgxyYp8TXwG4Z6";
+  };
+
+  useBlockScrolling(isMobileMenuOpen);
+
+  const handleLink = (id) => {
+    scrollToBlock(id);
+    setIsMobileMenuOpen(false);
+  };
+
   return (
-    <div>
+    <div className="navbar">
       <div className="navbar-base"></div>
-      <nav className="navbar">
-        <Link to={LANDING_ROUTE} className="logo scaled">
+      <nav>
+        <Link onClick={() => handleLink("main-block")} className="logo scaled">
           RIZOFT
         </Link>
 
         <div className="menu">
           {menuItems.map((item, index) => (
-            <Link to={item.route} className="item scaled" key={index}>
+            <Link
+              onClick={() => handleLink(item.id)}
+              className="item scaled"
+              key={index}
+            >
               {item.label}
             </Link>
           ))}
@@ -36,7 +52,7 @@ const NavBar = () => {
           </a>
         </div>
 
-        <RoundedButton text="Заполнить бриф" />
+        <RoundedButton text="Заполнить бриф" onClick={handleClick} />
 
         <div
           className="menu-toggle scaled"
@@ -49,10 +65,15 @@ const NavBar = () => {
       {isMobileMenuOpen && (
         <div className="mobile-menu">
           {menuItems.map((item, index) => (
-            <Link to={item.route} className="item scaled" key={index}>
+            <Link
+              onClick={() => handleLink(item.id)}
+              className="item scaled"
+              key={index}
+            >
               {item.label}
             </Link>
           ))}
+          <RoundedButton text="Заполнить бриф" onClick={handleClick} />
         </div>
       )}
     </div>

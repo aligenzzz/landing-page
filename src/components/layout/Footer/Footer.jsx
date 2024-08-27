@@ -1,9 +1,8 @@
 import React from "react";
 import { ReactComponent as TelegramIcon } from "@assets/icons/telegram.svg";
 import { ReactComponent as InstagramIcon } from "@assets/icons/instagram.svg";
-import { ReactComponent as WhatsappIcon } from "@assets/icons/whatsapp.svg";
 import { ReactComponent as LinkedinIcon } from "@assets/icons/linkedin.svg";
-import { ReactComponent as ViberIcon } from "@assets/icons/viber.svg";
+import { ReactComponent as EmailIcon } from "@assets/icons/email.svg";
 import "./Footer.styles.scss";
 
 const Footer = () => {
@@ -13,7 +12,7 @@ const Footer = () => {
         <div className="logo">RIZOFT</div>
         <div className="social-icons">
           <a
-            href="https://telegram.org"
+            href="https://t.me/veon_tech"
             target="_blank"
             rel="noopener noreferrer"
             title="Telegram"
@@ -21,7 +20,7 @@ const Footer = () => {
             <TelegramIcon className="icon scaled" />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/veontech.ru?igsh=Z21lMmc5aXJsdnhu"
             target="_blank"
             rel="noopener noreferrer"
             title="Instagram"
@@ -29,15 +28,7 @@ const Footer = () => {
             <InstagramIcon className="icon scaled" />
           </a>
           <a
-            href="https://www.whatsapp.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="WhatsApp"
-          >
-            <WhatsappIcon className="icon scaled" />
-          </a>
-          <a
-            href="https://linkedln.ru/"
+            href="https://www.linkedin.com/company/veon-tech/"
             target="_blank"
             rel="noopener noreferrer"
             title="LinkedIn"
@@ -45,12 +36,12 @@ const Footer = () => {
             <LinkedinIcon className="icon scaled" />
           </a>
           <a
-            href="https://viber.com"
+            href="mailto:clients@veon-tech.ru"
             target="_blank"
             rel="noopener noreferrer"
-            title="Viber"
+            title="Email"
           >
-            <ViberIcon className="icon scaled" />
+            <EmailIcon className="icon scaled" />
           </a>
         </div>
       </div>

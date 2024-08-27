@@ -56,6 +56,7 @@
                 flex-wrap: nowrap;
                 text-wrap: nowrap;
                 width: 100%;
+                text-decoration: none;
 
                 svg {
                     width: 1.6rem;
@@ -64,6 +65,21 @@
 
                     path {
                         fill: var(--dark-color);
+                    }
+                }
+
+                &:nth-child(3) {
+                    svg {
+                        transform: scale(1.15);
+                    }
+                }
+
+                &:nth-child(4) {
+                    .cls-1 {
+                        fill: none;
+                        stroke: var(--dark-color);
+                        stroke-miterlimit: 10;
+                        stroke-width: 2.2px;
                     }
                 }
             }

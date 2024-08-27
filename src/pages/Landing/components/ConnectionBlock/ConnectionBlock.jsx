@@ -2,21 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./ConnectionBlock.styles.scss";
 import RoundedButton from "@components/shared/RoundedButton";
 import { ReactComponent as CloseIcon } from "@assets/icons/close.svg";
+import { useBlockScrolling } from "@hook/scrolling";
 
 const ConnectionBlock = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  useEffect(() => {
-    if (isModalOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isModalOpen]);
+  useBlockScrolling(isModalOpen);
 
   return (
     <div className="connection-block">

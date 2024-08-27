@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./ReviewsBlock.styles.scss";
-import Client1 from "@assets/images/clients/client1.png";
-import Client2 from "@assets/images/clients/client2.png";
-import Client3 from "@assets/images/clients/client3.png";
-import Client7 from "@assets/images/clients/client7.png";
+import Client1 from "@assets/images/clients/review_client1.png";
+import Client2 from "@assets/images/clients/review_client2.png";
+import Client3 from "@assets/images/clients/review_client3.png";
+import Client4 from "@assets/images/clients/review_client4.png";
 import { ReactComponent as NextArrowIcon } from "@assets/icons/next_arrow_green.svg";
 import { ReactComponent as QuoteIcon } from "@assets/icons/quote.svg";
 import CubeElement from "@assets/elements/cube.png";
@@ -13,32 +13,28 @@ import ReviewDocument3 from "@assets/images/reviews/review3.png";
 import ReviewDocument4 from "@assets/images/reviews/review4.png";
 import { ReactComponent as CloseIcon } from "@assets/icons/close.svg";
 import { useSwipeable } from "react-swipeable";
+import { useBlockScrolling } from "@hook/scrolling";
 
 const reviews = [
   {
-    image: Client2,
-    text: "Lorem ipsum dolor sit amet consectetur. Pulvinar neque tellus magna nisl felis vitae. Elit non nunc quam lorem praesent sit quis amet. At velit nunc tristique mauris ac ultricies faucibus dui semper.  ",
+    image: Client1,
+    text: 'От лица ООО "НДВ-Комплект" выражаю благодарность ООО "Веон-консалт" за проведенный работы над сайтом. В ходе совместной работы сотрудники проявили профессионализм, компетентность и вовлеченность...',
     document: ReviewDocument1,
   },
   {
-    image: Client7,
-    text: "Lorem ipsum dolor sit amet consectetur. Pulvinar neque tellus magna nisl felis vitae. Elit non nunc quam lorem praesent sit quis amet. At velit nunc tristique mauris ac ultricies faucibus dui semper.  ",
+    image: Client2,
+    text: "Выражаем благодарность студии разработки RIZOFT за качественную и своевременную сдачу поставленных задач. Работаем с вышеуказанной компанией уже более двух лет. Всегда чутко относятся ко всем просьбам...",
     document: ReviewDocument2,
   },
   {
-    image: Client7,
-    text: "Lorem ipsum dolor sit amet consectetur. Pulvinar neque tellus magna nisl felis vitae. Elit non nunc quam lorem praesent sit quis amet. At velit nunc tristique mauris ac ultricies faucibus dui semper.  ",
+    image: Client3,
+    text: "We thank the RIZOFT team for a fruiful and pleasent cooperation. Your team has done a great job of creating mobile application for our internal use from scratch and before including the product in our business process - clearly, quickly, in accordance with the terms of reference...",
     document: ReviewDocument3,
   },
   {
-    image: Client1,
-    text: "Lorem ipsum dolor sit amet consectetur. Pulvinar neque tellus magna nisl felis vitae. Elit non nunc quam lorem praesent sit quis amet. At velit nunc tristique mauris ac ultricies faucibus dui semper.  ",
+    image: Client4,
+    text: "Сотрудничаем с компанией RIZOFT уже долгое время: команда показывает себя исключительно с хорошей стороны. Всегда со знанием дела подходят к выполнению поставленных задач, работа сдается в срок и главное качетсвенно...",
     document: ReviewDocument4,
-  },
-  {
-    image: Client3,
-    text: "Lorem ipsum dolor sit amet consectetur. Pulvinar neque tellus magna nisl felis vitae. Elit non nunc quam lorem praesent sit quis amet. At velit nunc tristique mauris ac ultricies faucibus dui semper.  ",
-    document: ReviewDocument1,
   },
 ];
 
@@ -95,24 +91,14 @@ const ReviewsBlock = () => {
     }
   }, [animate]);
 
-  useEffect(() => {
-    if (selectedReview) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [selectedReview]);
+  useBlockScrolling(selectedReview);
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: nextReviews,
   });
 
   return (
-    <div className="reviews-block" id="parallax">
+    <div className="reviews-block" id="reviews">
       <h2 className="title" data-aos="fade-right">
         Отзывы
       </h2>

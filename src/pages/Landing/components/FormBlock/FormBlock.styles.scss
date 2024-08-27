@@ -1,14 +1,10 @@
 .form-block {
     width: 100%;
-    padding: 200px 7.39583% 221px;
+    padding: 10rem 7.39583% 11rem;
     overflow-x: hidden;
 
     @media (max-width: 1024px) {
-        padding: 100px 7.39583%;
-    }
-
-    @media (max-width: 480px) {
-        padding: 70px 7.39583%;
+        padding: 6rem 7.39583% 7rem;
     }
 
     .title {
@@ -16,7 +12,7 @@
         font-weight: 600;
         line-height: 4.461rem;
         color: var(--dark-color);
-        margin-bottom: 51px;
+        margin-bottom: 2.5rem;
 
         @media (max-width: 1024px) {
             font-size: 2.5rem;
@@ -24,11 +20,8 @@
         }
 
         @media (max-width: 768px) {
-            margin-bottom: 30px;
-        }
-
-        @media (max-width: 280px) {
-            font-size: 2.4rem;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
         }
     }
 
@@ -38,18 +31,18 @@
         font-weight: 500;
         line-height: 4rem;
         color: var(--tertiary-color);
-        margin-bottom: 110px;
+        margin-bottom: 5.5rem;
         vertical-align: top;
 
         @media (max-width: 1024px) {
-            font-size: 2rem;
-            line-height: 2.5rem;
-            margin-bottom: 70px;
+            font-size: 2.1rem;
+            line-height: 2.3rem;
         }
 
         @media (max-width: 768px) {
-            margin-bottom: 30px;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+            line-height: 1.7rem;
+            margin-bottom: 3.5rem;
         }
 
         a {
@@ -73,16 +66,15 @@
             width: 100%;
             display: flex;
             flex-direction: row;
-            margin-bottom: 75px;
+            margin-bottom: 3rem;
             gap: 1.5%;
 
             @media (max-width: 1024px) {
                 flex-direction: column;
-                margin-bottom: 40px;
             }
 
-            @media (max-width: 1024px) {
-                margin-bottom: 20px;
+            @media (max-width: 786px) {
+                margin-bottom: 0;
             }
 
             .item {
@@ -90,10 +82,7 @@
                 width: 100%;
 
                 @media (max-width: 1024px) {
-                    margin-bottom: 40px;
-                }
-                @media (max-width: 768px) {
-                    margin-bottom: 20px;
+                    margin-bottom: 2.8rem;
                 }
 
                 p {
@@ -102,15 +91,17 @@
                     font-weight: 600;
                     line-height: 3.0475rem;
                     color: var(--tertiary-color);
-                    margin-bottom: 22px;
+                    margin-bottom: 1.1rem;
 
                     @media (max-width: 1024px) {
-                        font-size: 2rem;
-                        line-height: 2.5rem;
+                        font-size: 2.1rem;
+                        line-height: 2.3rem;
                     }
 
                     @media (max-width: 768px) {
-                        font-size: 1.8rem;
+                        font-size: 1.5rem;
+                        line-height: 1.7rem;
+                        margin-bottom: 0.9rem;
                     }
                 }
 
@@ -125,7 +116,7 @@
                     padding: 1.85rem 3%;
 
                     @media (max-width: 768px) {
-                        padding: 1.4rem 4%;
+                        padding: 1.3rem 3%;
                     }
 
                     &::placeholder {
@@ -139,14 +130,10 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            margin-bottom: 94px;
-
-            @media (max-width: 1024px) {
-                margin-bottom: 60px;
-            }
+            margin-bottom: 4.7rem;
 
             @media (max-width: 768px) {
-                margin-bottom: 40px;
+                margin-bottom: 3.5rem;
             }
 
             .clip-icon {
@@ -181,15 +168,14 @@
         }
 
         .select-container {
-            margin-bottom: 119px;
+            margin-bottom: 5.95rem;
 
             @media (max-width: 1024px) {
-                margin-bottom: 80px;
                 width: 100%;
             }
 
             @media (max-width: 768px) {
-                margin-bottom: 40px;
+                margin-bottom: 3.5rem;
             }
 
             p {
@@ -197,12 +183,16 @@
                 font-weight: 600;
                 line-height: 3.0475rem;
                 color: var(--tertiary-color);
-                margin-bottom: 31px;
+                margin-bottom: 1.55rem;
+
+                @media (max-width: 1024px) {
+                    font-size: 2.1rem;
+                    line-height: 2.3rem;
+                }
 
                 @media (max-width: 768px) {
-                    font-size: 2rem;
-                    font-weight: 600;
-                    line-height: 2.6rem;
+                    font-size: 1.5rem;
+                    line-height: 1.7rem;
                 }
             }
 
@@ -214,10 +204,10 @@
                 justify-content: flex-start;
                 border-radius: 13px;
                 background-color: var(--quaternary-color);
-                padding: 37px 3% 37px 1.5%;
+                padding: 1.85rem 3% 1.85rem 1.5%;
                 flex-wrap: wrap;
                 column-gap: 3%;
-                row-gap: 20px;
+                row-gap: 1rem;
 
                 @media (max-width: 1024px) {
                     width: 100%;
@@ -268,6 +258,11 @@
                             background: var(--tertiary-color);
                             opacity: 0.75;
                             transform: translate(-50%, -50%);
+
+                            @media (max-width: 768px) {
+                                width: 0.6rem;
+                                height: 0.6rem;
+                            }
                         }
 
                         &:checked::before {
@@ -282,8 +277,8 @@
                             transform: translate(-50%, -50%);
 
                             @media (max-width: 768px) {
-                                width: 0.8rem;
-                                height: 0.8rem;
+                                width: 0.6rem;
+                                height: 0.6rem;
                             }
                         }
                     }
@@ -312,7 +307,8 @@
 
                 @media (max-width: 1024px) {
                     width: 100% !important;
-                    margin-bottom: 20px !important;
+                    margin-bottom: 1.4rem !important;
+                    margin-right: 0 !important;
                 }
             }
 

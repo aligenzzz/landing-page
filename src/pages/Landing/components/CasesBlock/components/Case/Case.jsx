@@ -1,6 +1,5 @@
 import React from "react";
 import "./Case.styles.scss";
-import { ReactComponent as StarIcon } from "@assets/icons/star.svg";
 
 const Case = ({ caseData }) => {
   return (
@@ -8,24 +7,30 @@ const Case = ({ caseData }) => {
       <img src={caseData.image} alt={caseData.name} className="image" />
       <div className="details">
         <p className="name">{caseData.name}</p>
-        <p className="description">{caseData.description}</p>
+
+        <div className="mobile-block">
+          <img
+            src={caseData.image}
+            alt={caseData.name}
+            className="image mobile-image"
+          />
+          <p className="description">{caseData.description}</p>
+        </div>
+
         <div className="table">
-          <div className="column">
-            <p className="header">Рейтинг</p>
-            <div className="rating">
-              <p className="value">{caseData.rating}</p>
-              <StarIcon className="star" />
-            </div>
-          </div>
-          <div className="line-divider"></div>
-          <div className="column">
-            <p className="header">Возраст</p>
-            <p className="value">{caseData.age}</p>
-          </div>
-          <div className="line-divider"></div>
           <div className="column">
             <p className="header">Категория</p>
             <p className="value">{caseData.category}</p>
+          </div>
+          <div className="line-divider"></div>
+          <div className="column">
+            <p className="header">Тема</p>
+            <p className="value">{caseData.theme}</p>
+          </div>
+          <div className="line-divider"></div>
+          <div className="column">
+            <p className="header">Концепт</p>
+            <p className="value">{caseData.concept}</p>
           </div>
         </div>
       </div>

@@ -1,16 +1,17 @@
 .reviews-block {
     width: 100%;
-    padding: 59px 7.8125% 300px 7.03125%;
+    padding: 2.95rem 7.8125% 15rem 7.03125%;
     position: relative;
-    margin-bottom: 79px;
+    margin-bottom: 3.95rem;
     overflow-x: hidden;
+    overflow-y: hidden;
 
     @media (max-width: 1024px) {
-        padding: 59px 7.8125% 300px;
+        padding: 2.95rem 7.8125% 15rem;
     }
 
     @media (max-width: 768px) {
-        padding-bottom: 140px;
+        padding-bottom: 7.5rem;
     }
 
     .title {
@@ -18,7 +19,7 @@
         font-weight: 600;
         line-height: 4.461rem;
         color: var(--dark-color);
-        margin-bottom: 196px;
+        margin-bottom: 9.8rem;
 
         @media (max-width: 1024px) {
             font-size: 2.5rem;
@@ -26,11 +27,9 @@
         }
 
         @media (max-width: 768px) {
-            margin-bottom: 60px;
-        }
-
-        @media (max-width: 280px) {
-            font-size: 2.4rem;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            margin-bottom: 5rem;
         }
     }
 
@@ -94,12 +93,19 @@
                 }
 
                 @media (max-width: 768px) {
-                    width: 100%;
+                    justify-content: center;
+                    width: 80%;
+                    transform: translateX(10%);
+                }
+
+                svg {
+                    width: 1.5rem;
+                    height: auto;
                 }
 
                 .image-container {
                     width: 100%;
-                    height: 100px;
+                    height: 5rem;
                     overflow: hidden;
                     display: flex;
                     justify-content: center;
@@ -116,7 +122,12 @@
                     font-weight: 500;
                     line-height: 1.09rem;
                     color: var(--dark-color);
-                    min-height: 12.25rem;
+                    height: 12.25rem;
+                    margin-bottom: 1.5rem;
+
+                    @media (max-width: 768px) {
+                        height: auto;
+                    }
                 }
 
                 .learn-more {

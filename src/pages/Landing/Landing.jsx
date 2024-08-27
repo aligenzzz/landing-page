@@ -6,28 +6,27 @@ import {
   CasesBlock,
   FormBlock,
   StepsBlock,
-  CooperationBlock,
+  MethodologyBlock,
   AdvantagesBlock,
   ClientsBlock,
   ReviewsBlock,
   ConnectionBlock,
 } from "./components";
-import { ScrollProvider } from "@store/ScrollContext";
 
 const Landing = () => {
   return (
-    <ScrollProvider>
+    <>
       <MainBlock />
       <DescriptionBlock />
       <CasesBlock />
       <FormBlock />
       <StepsBlock />
-      <CooperationBlock />
+      <MethodologyBlock />
       <AdvantagesBlock />
       <ClientsBlock />
       <ReviewsBlock />
       <ConnectionBlock />
-    </ScrollProvider>
+    </>
   );
 };
 
